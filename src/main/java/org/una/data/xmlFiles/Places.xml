@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Places>
+    <coordinates id="0">
+        <x>388</x>
+        <y>263</y>
+    </coordinates>
+    <coordinates id="1">
+        <x>360</x>
+        <y>287</y>
+    </coordinates>
+    <coordinates id="2">
+        <x>92</x>
+        <y>205</y>
+    </coordinates>
+    <coordinates id="3">
+        <x>368</x>
+        <y>344</y>
+    </coordinates>
+    <coordinates id="5">
+        <x>610</x>
+        <y>333</y>
+    </coordinates>
+    <coordinates id="6">
+        <x>266</x>
+        <y>290</y>
+    </coordinates>
+    <coordinates id="9">
+        <x>409</x>
+        <y>178</y>
+    </coordinates>
+</Places>
