@@ -22,8 +22,17 @@ public class BranchDAO extends DAOHibernate<BranchEntity> {
 
     @Override
     public boolean add(BranchEntity obj) {
-
-        return false;
+        boolean flag = true;
+        if(exists(obj.getIdBranch())){
+            flag = false;
+        }else{
+            turnOn();
+            entityManager.getTransaction().begin();
+            entityManager.persist(obj);
+            entityManager.getTransaction().commit();
+            shutDown();
+        }
+        return flag;
     }
 
     @Override
