@@ -5,15 +5,12 @@ import jakarta.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Table(name = "canton", schema = "sise", catalog = "")
+@Table(name = "canton", schema = "sise")
 public class CantonEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id_canton")
     private Integer idCanton;
-    @Basic
-    @Column(name = "id_province")
-    private Byte idProvince;
     @Basic
     @Column(name = "name_canton")
     private String nameCanton;
@@ -33,14 +30,6 @@ public class CantonEntity {
         this.idCanton = idCanton;
     }
 
-    public Byte getIdProvince() {
-        return idProvince;
-    }
-
-    public void setIdProvince(Byte idProvince) {
-        this.idProvince = idProvince;
-    }
-
     public String getNameCanton() {
         return nameCanton;
     }
@@ -57,7 +46,6 @@ public class CantonEntity {
         CantonEntity that = (CantonEntity) o;
 
         if (idCanton != null ? !idCanton.equals(that.idCanton) : that.idCanton != null) return false;
-        if (idProvince != null ? !idProvince.equals(that.idProvince) : that.idProvince != null) return false;
         if (nameCanton != null ? !nameCanton.equals(that.nameCanton) : that.nameCanton != null) return false;
 
         return true;
@@ -66,7 +54,6 @@ public class CantonEntity {
     @Override
     public int hashCode() {
         int result = idCanton != null ? idCanton.hashCode() : 0;
-        result = 31 * result + (idProvince != null ? idProvince.hashCode() : 0);
         result = 31 * result + (nameCanton != null ? nameCanton.hashCode() : 0);
         return result;
     }

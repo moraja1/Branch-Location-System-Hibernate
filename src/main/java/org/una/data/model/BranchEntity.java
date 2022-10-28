@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Table(name = "branch", schema = "sise", catalog = "")
+@Table(name = "branch", schema = "sise")
 public class BranchEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -20,15 +20,6 @@ public class BranchEntity {
     @Basic
     @Column(name = "coord_y")
     private Integer coordY;
-    @Basic
-    @Column(name = "id_district")
-    private Integer idDistrict;
-    @Basic
-    @Column(name = "id_canton")
-    private Integer idCanton;
-    @Basic
-    @Column(name = "id_province")
-    private Byte idProvince;
     @ManyToOne
     @JoinColumn(name = "id_district", referencedColumnName = "id_district", nullable = false)
     private DistrictEntity districtByIdDistrict;
@@ -73,30 +64,6 @@ public class BranchEntity {
         this.coordY = coordY;
     }
 
-    public Integer getIdDistrict() {
-        return idDistrict;
-    }
-
-    public void setIdDistrict(Integer idDistrict) {
-        this.idDistrict = idDistrict;
-    }
-
-    public Integer getIdCanton() {
-        return idCanton;
-    }
-
-    public void setIdCanton(Integer idCanton) {
-        this.idCanton = idCanton;
-    }
-
-    public Byte getIdProvince() {
-        return idProvince;
-    }
-
-    public void setIdProvince(Byte idProvince) {
-        this.idProvince = idProvince;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -108,9 +75,6 @@ public class BranchEntity {
         if (address != null ? !address.equals(that.address) : that.address != null) return false;
         if (coordX != null ? !coordX.equals(that.coordX) : that.coordX != null) return false;
         if (coordY != null ? !coordY.equals(that.coordY) : that.coordY != null) return false;
-        if (idDistrict != null ? !idDistrict.equals(that.idDistrict) : that.idDistrict != null) return false;
-        if (idCanton != null ? !idCanton.equals(that.idCanton) : that.idCanton != null) return false;
-        if (idProvince != null ? !idProvince.equals(that.idProvince) : that.idProvince != null) return false;
 
         return true;
     }
@@ -121,9 +85,6 @@ public class BranchEntity {
         result = 31 * result + (address != null ? address.hashCode() : 0);
         result = 31 * result + (coordX != null ? coordX.hashCode() : 0);
         result = 31 * result + (coordY != null ? coordY.hashCode() : 0);
-        result = 31 * result + (idDistrict != null ? idDistrict.hashCode() : 0);
-        result = 31 * result + (idCanton != null ? idCanton.hashCode() : 0);
-        result = 31 * result + (idProvince != null ? idProvince.hashCode() : 0);
         return result;
     }
 

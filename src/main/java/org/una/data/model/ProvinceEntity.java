@@ -1,16 +1,17 @@
 package org.una.data.model;
 
 import jakarta.persistence.*;
+import jakarta.persistence.criteria.CriteriaBuilder;
 
 import java.util.Collection;
 
 @Entity
-@Table(name = "province", schema = "sise", catalog = "")
+@Table(name = "province", schema = "sise")
 public class ProvinceEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id_province")
-    private Byte idProvince;
+    private Integer idProvince;
     @Basic
     @Column(name = "name_province")
     private String nameProvince;
@@ -22,11 +23,11 @@ public class ProvinceEntity {
     @OneToMany(mappedBy = "provinceByIdProvince")
     private Collection<CantonEntity> cantonsByIdProvince;
 
-    public Byte getIdProvince() {
+    public Integer getIdProvince() {
         return idProvince;
     }
 
-    public void setIdProvince(Byte idProvince) {
+    public void setIdProvince(Integer idProvince) {
         this.idProvince = idProvince;
     }
 
