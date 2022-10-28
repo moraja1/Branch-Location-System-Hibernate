@@ -7,7 +7,7 @@ import org.una.data.xmlParsers.ModelsParsers.EmployeeXML;
 
 import java.util.HashMap;
 
-public class EmployeesDAO extends DAO<Employee> {
+public class EDAO extends DAO<Employee> {
 
     @Override
     public boolean add(Employee obj) {

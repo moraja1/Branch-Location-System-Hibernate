@@ -1,6 +1,6 @@
 package org.una.business;
 
-import org.una.data.dao.modelsDAO.CoordinatesDAO;
+import org.una.data.dao.modelsDAO.CDAO;
 import org.una.data.repository.Branch;
 import org.una.data.repository.Coordinates;
 import org.una.presentation.model.viewModels.BranchInfo;
@@ -13,8 +13,8 @@ public class BranchParser {
         double zoning_percentage = branch.getZoning_percentage();
         String coords = branch.getCoords().getId();
 
-        CoordinatesDAO dataDAO = new CoordinatesDAO();
-        Coordinates coordinates = dataDAO.getSingleObject(coords);
+        CDAO dataDAO = new CDAO();
+        Coordinates coordinates = new Coordinates("34");
         coords = new StringBuilder().append(coordinates.getX()).append(", ").append(coordinates.getY()).toString();
 
         return new BranchInfo(id, reference, address, zoning_percentage, coords);

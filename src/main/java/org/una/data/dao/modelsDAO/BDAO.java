@@ -7,7 +7,7 @@ import org.una.data.xmlParsers.ModelsParsers.BranchXML;
 
 import java.util.HashMap;
 
-public class BranchesDAO extends DAO<Branch> {
+public class BDAO extends DAO<Branch> {
 
     @Override
     public boolean add(Branch obj) {

@@ -4,9 +4,8 @@ import org.una.data.repository.Branch;
 import org.una.data.repository.Coordinates;
 import org.una.data.repository.Employee;
 import org.una.data.dao.DAO;
-import org.una.data.dao.modelsDAO.BranchesDAO;
-import org.una.data.dao.modelsDAO.CoordinatesDAO;
-import org.una.data.dao.modelsDAO.EmployeesDAO;
+import org.una.data.dao.modelsDAO.BDAO;
+import org.una.data.dao.modelsDAO.EDAO;
 import org.una.presentation.model.viewModels.BranchInfo;
 import org.una.presentation.model.viewModels.EmployeeInfo;
 
@@ -17,10 +16,10 @@ import java.util.List;
 public class DataServices {
     private static DAO dataDAO;
     public static List<EmployeeInfo> getEmployeesForTable() {
-        dataDAO = new EmployeesDAO();
+        dataDAO = new EDAO();
         HashMap<String, Employee> dataEmployees = dataDAO.getAllObjects();
         List<Employee> dataEmployeesList = dataEmployees.values().stream().toList();
-        dataDAO = new BranchesDAO();
+        dataDAO = new BDAO();
         HashMap<String, Branch> dataBranches = dataDAO.getAllObjects();
 
         List<EmployeeInfo> employees = new ArrayList<>();
@@ -50,11 +49,10 @@ public class DataServices {
         return employees;
     }
     public static List<BranchInfo> getBranchesForTable() {
-        dataDAO = new BranchesDAO();
+        dataDAO = new BDAO();
         HashMap<String, Branch> dataBranches = dataDAO.getAllObjects();
         List<Branch> dataBranchesList = dataBranches.values().stream().toList();
 
-        dataDAO = new CoordinatesDAO();
         HashMap<String, Coordinates> dataCoords = dataDAO.getAllObjects();
 
         List<BranchInfo> branches = new ArrayList<>();
@@ -68,7 +66,7 @@ public class DataServices {
     }
     public static boolean addEmployeeExecution(EmployeeInfo e, BranchInfo b) {
         //Get Branch
-        dataDAO = new BranchesDAO();
+        dataDAO = new BDAO();
         Branch branch = (Branch) dataDAO.getSingleObject(b.getId());
         if(branch == null){
             return false;
@@ -78,7 +76,7 @@ public class DataServices {
         branch.getEmployees().add(employee);
 
         if(dataDAO.edit(branch)){
-            dataDAO = new EmployeesDAO();
+            dataDAO = new EDAO();
             return dataDAO.add(employee);
         }
         return false;
@@ -86,7 +84,7 @@ public class DataServices {
     public static boolean removeEmployeeExecution(EmployeeInfo e) {
         Employee employee = EmployeeParser.toEmployee(e);
         if(employee != null){
-            dataDAO = new EmployeesDAO();
+            dataDAO = new EDAO();
             dataDAO.erase(employee);
 
             Branch branch = employee.getBranch();
@@ -102,14 +100,14 @@ public class DataServices {
             }
             branch.setEmployees(employeeList);
 
-            dataDAO = new BranchesDAO();
+            dataDAO = new BDAO();
             return dataDAO.edit(branch);
 
         }
         return false;
     }
     public static BranchInfo getBranchInfo(String key) {
-        BranchesDAO dataDAO = new BranchesDAO();
+        BDAO dataDAO = new BDAO();
         Branch branch = dataDAO.getSingleObject(key);
         if(branch == null){
             branch = dataDAO.getBranchByReference(key);
@@ -122,11 +120,11 @@ public class DataServices {
     }
     public static boolean editEmployeeExecution(EmployeeInfo e, BranchInfo b) {
         //Get Branch
-        dataDAO = new BranchesDAO();
+        dataDAO = new BDAO();
         Branch newBranch = (Branch) dataDAO.getSingleObject(b.getId());
         Employee newEmployee = EmployeeParser.toEmployee(e);
 
-        dataDAO = new EmployeesDAO();
+        dataDAO = new EDAO();
         Employee oldEmployee = (Employee) dataDAO.getSingleObject(e.getId());
 
         List<Employee> employeesOnNewBranch = newBranch.getEmployees();
@@ -138,7 +136,7 @@ public class DataServices {
         }
         if(!containsEmployee) {
             newBranch.getEmployees().add(newEmployee);
-            BranchesDAO dataDAO = new BranchesDAO();
+            BDAO dataDAO = new BDAO();
             dataDAO.edit(newBranch);
 
             Branch oldBranch = dataDAO.getSingleObject(oldEmployee.getBranch().getId());
@@ -156,7 +154,7 @@ public class DataServices {
                 }
             }
         }
-        dataDAO = new EmployeesDAO();
+        dataDAO = new EDAO();
         return dataDAO.edit(newEmployee);
     }
 
@@ -164,18 +162,17 @@ public class DataServices {
         Branch newBranch = BranchParser.toBranch(b);
         Coordinates coordinates = newBranch.getCoords();
 
-        dataDAO = new BranchesDAO();
+        dataDAO = new BDAO();
         if(dataDAO.add(newBranch)){
-            dataDAO = new CoordinatesDAO();
             return dataDAO.add(coordinates);
         }
         return false;
     }
 
     public static boolean removeBranchExecution(BranchInfo b) {
-        dataDAO = new BranchesDAO();
+        dataDAO = new BDAO();
         Branch branch = (Branch) dataDAO.getSingleObject(b.getId());
-        dataDAO = new EmployeesDAO();
+        dataDAO = new EDAO();
         List<Employee> employeesOfBranch = new ArrayList<>();
         for(Employee em : branch.getEmployees()){
             Employee emp = (Employee) dataDAO.getSingleObject(em.getId());
@@ -184,15 +181,13 @@ public class DataServices {
         }
         if(branch != null){
             Coordinates coordinates = branch.getCoords();
-            dataDAO = new CoordinatesDAO();
             coordinates = (Coordinates) dataDAO.getSingleObject(coordinates.getId());
-            dataDAO = new BranchesDAO();
+            dataDAO = new BDAO();
             if(dataDAO.erase(branch)){
-                dataDAO = new EmployeesDAO();
+                dataDAO = new EDAO();
                 for(Employee em : employeesOfBranch){
                     dataDAO.edit(em);
                 }
-                dataDAO = new CoordinatesDAO();
                 return dataDAO.erase(coordinates);
             }
         }
@@ -203,9 +198,8 @@ public class DataServices {
         Branch newBranch = BranchParser.toBranch(b);
         Coordinates coordinates = newBranch.getCoords();
 
-        dataDAO = new BranchesDAO();
+        dataDAO = new BDAO();
         if(dataDAO.edit(newBranch)){
-            dataDAO = new CoordinatesDAO();
             return dataDAO.edit(coordinates);
         }
         return false;

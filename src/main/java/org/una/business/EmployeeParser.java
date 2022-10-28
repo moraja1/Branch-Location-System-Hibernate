@@ -2,7 +2,7 @@ package org.una.business;
 
 import org.una.data.repository.Branch;
 import org.una.data.repository.Employee;
-import org.una.data.dao.modelsDAO.BranchesDAO;
+import org.una.data.dao.modelsDAO.BDAO;
 import org.una.presentation.model.viewModels.EmployeeInfo;
 
 public class EmployeeParser {
@@ -14,7 +14,7 @@ public class EmployeeParser {
         double base_salary = e.getBase_salary();
         String reference = e.getBranch_reference();
 
-        BranchesDAO dataDAO = new BranchesDAO();
+        BDAO dataDAO = new BDAO();
         Branch branch = dataDAO.getBranchByReference(reference);
         if(branch != null){
             return new Employee(id, name, phone_number, base_salary, branch);

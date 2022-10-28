@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "employee", schema = "sise")
 public class EmployeeEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     @Column(name = "id_employee")
     private Integer idEmployee;

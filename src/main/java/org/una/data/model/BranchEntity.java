@@ -6,8 +6,11 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "branch", schema = "sise")
+@NamedQueries({
+        @NamedQuery(name = "BranchEntity.existsByID", query = "select (count(b) > 0) from BranchEntity b where b.idBranch = :idBranch")
+})
 public class BranchEntity {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     @Column(name = "id_branch")
     private Integer idBranch;
@@ -88,35 +91,35 @@ public class BranchEntity {
         return result;
     }
 
-    public DistrictEntity getDistrictByIdDistrict() {
+    public DistrictEntity getDistrict() {
         return districtByIdDistrict;
     }
 
-    public void setDistrictByIdDistrict(DistrictEntity districtByIdDistrict) {
+    public void setDistrict(DistrictEntity district) {
         this.districtByIdDistrict = districtByIdDistrict;
     }
 
-    public CantonEntity getCantonByIdCanton() {
+    public CantonEntity getCanton() {
         return cantonByIdCanton;
     }
 
-    public void setCantonByIdCanton(CantonEntity cantonByIdCanton) {
+    public void setCanton(CantonEntity canton) {
         this.cantonByIdCanton = cantonByIdCanton;
     }
 
-    public ProvinceEntity getProvinceByIdProvince() {
+    public ProvinceEntity getProvince() {
         return provinceByIdProvince;
     }
 
-    public void setProvinceByIdProvince(ProvinceEntity provinceByIdProvince) {
+    public void setProvince(ProvinceEntity province) {
         this.provinceByIdProvince = provinceByIdProvince;
     }
 
-    public Collection<EmployeeEntity> getEmployeesByIdBranch() {
+    public Collection<EmployeeEntity> getEmployees() {
         return employeesByIdBranch;
     }
 
-    public void setEmployeesByIdBranch(Collection<EmployeeEntity> employeesByIdBranch) {
+    public void setEmployees(Collection<EmployeeEntity> employees) {
         this.employeesByIdBranch = employeesByIdBranch;
     }
 }
