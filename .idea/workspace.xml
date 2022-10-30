@@ -4,21 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68f172b2-35f1-4a59-a3ca-c599a40fb810" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/application/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/hibernate/HibernateUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/model/BranchEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/model/CantonEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/model/DistrictEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/model/EmployeeEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/model/ProvinceEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MySQL script SISE-JAISON MORA VIQUEZ.sql" beforeDir="false" />
+    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Intento 3541685486498 de que se conecte">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/91441e36-b72a-4493-9368-1a816cf5360f.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/91441e36-b72a-4493-9368-1a816cf5360f/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/91441e36-b72a-4493-9368-1a816cf5360f/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/91441e36-b72a-4493-9368-1a816cf5360f/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/91441e36-b72a-4493-9368-1a816cf5360f/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MySQL script SISE-JAISON MORA VIQUEZ.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Canton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/District.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Province.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5202f956-af16-4007-88f5-c1ae0e29a43e.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5202f956-af16-4007-88f5-c1ae0e29a43e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5202f956-af16-4007-88f5-c1ae0e29a43e/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5202f956-af16-4007-88f5-c1ae0e29a43e/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5202f956-af16-4007-88f5-c1ae0e29a43e/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5202f956-af16-4007-88f5-c1ae0e29a43e/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/hibernate/HibernateUtility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/model/BranchEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/model/CantonEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/model/DistrictEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/model/EmployeeEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/model/ProvinceEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,34 +47,43 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="com.haulmont.jpb.JpaEntity" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2GpaAhbgXOZSFH0PZBcz28QYaVn" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2GptF84IQFVU3NTrarOdTtWoULh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JPA.DatabaseSchemaImportDialog": "5202f956-af16-4007-88f5-c1ae0e29a43e",
+    "JPA.DatabaseSchemaImportDialog": "91441e36-b72a-4493-9368-1a816cf5360f",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "WebServerToolWindowFactoryState": "false"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -65,18 +93,19 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="data.model" />
+      <recent name="com.una.data.model" />
+      <recent name="" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="68f172b2-35f1-4a59-a3ca-c599a40fb810" name="Changes" comment="" />
-      <created>1667087836999</created>
+      <changelist id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="" />
+      <created>1667097248665</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1667087836999</updated>
-      <workItem from="1667087838127" duration="2693000" />
+      <updated>1667097248665</updated>
+      <workItem from="1667097251038" duration="1186000" />
     </task>
     <servers />
   </component>
@@ -93,5 +122,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Intento 3541685486498 de que se conecte" />
+    <option name="LAST_COMMIT_MESSAGE" value="Intento 3541685486498 de que se conecte" />
   </component>
 </project>
