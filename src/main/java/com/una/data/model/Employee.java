@@ -4,30 +4,30 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "employee")
-public class Employee {
+public class Employee extends EntityParent {
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    @Column(name = "id_employee", nullable = false)
-    private Integer id;
-
-    @Column(name = "name_employee", length = 32)
+    @Column(name = "id_employee")
+    private Integer idEmployee;
+    @Basic
+    @Column(name = "name_employee")
     private String nameEmployee;
-
-    @Column(name = "phone_number", length = 32)
+    @Basic
+    @Column(name = "phone_number")
     private String phoneNumber;
-
+    @Basic
     @Column(name = "base_salary")
     private Double baseSalary;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_branch", nullable = false)
-    private Branch idBranch;
+    @ManyToOne
+    @JoinColumn(name = "id_branch", referencedColumnName = "id_branch", nullable = false)
+    private Branch branchByIdBranch;
 
     public Integer getId() {
-        return id;
+        return idEmployee;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdEmployee(Integer idEmployee) {
+        this.idEmployee = idEmployee;
     }
 
     public String getNameEmployee() {
@@ -54,12 +54,11 @@ public class Employee {
         this.baseSalary = baseSalary;
     }
 
-    public Branch getIdBranch() {
-        return idBranch;
+    public Branch getBranchByIdBranch() {
+        return branchByIdBranch;
     }
 
-    public void setIdBranch(Branch idBranch) {
-        this.idBranch = idBranch;
+    public void setBranchByIdBranch(Branch branchByIdBranch) {
+        this.branchByIdBranch = branchByIdBranch;
     }
-
 }

@@ -1128,7 +1128,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>1</Position>
     </column>
     <column id="306" parent="300" name="address">
-      <DataType>varchar(32)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
     <column id="307" parent="300" name="coord_x">
@@ -1139,36 +1139,30 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="309" parent="300" name="id_district">
+    <column id="309" parent="300" name="id_canton">
       <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="310" parent="300" name="id_canton">
+    <column id="310" parent="300" name="id_district">
       <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <column id="311" parent="300" name="id_province">
-      <DataType>tinyint(1)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>tinyint|0s</DataType>
       <Position>7</Position>
     </column>
-    <foreign-key id="312" parent="300" name="branch_ibfk_1">
-      <ColNames>id_district</ColNames>
-      <OnUpdate>cascade</OnUpdate>
-      <RefColNames>id_district</RefColNames>
-      <RefTableName>district</RefTableName>
-    </foreign-key>
-    <foreign-key id="313" parent="300" name="branch_ibfk_2">
+    <foreign-key id="312" parent="300" name="FKhfb5yl6g94b1gj2c4mi1xin8c">
       <ColNames>id_canton</ColNames>
-      <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_canton</RefColNames>
       <RefTableName>canton</RefTableName>
     </foreign-key>
-    <foreign-key id="314" parent="300" name="branch_ibfk_3">
+    <foreign-key id="313" parent="300" name="FKt0ig9oeu8maija18vyykgcsqg">
+      <ColNames>id_district</ColNames>
+      <RefColNames>id_district</RefColNames>
+      <RefTableName>district</RefTableName>
+    </foreign-key>
+    <foreign-key id="314" parent="300" name="FKbyo5uymy3xi2yei0yv61cm7py">
       <ColNames>id_province</ColNames>
-      <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_province</RefColNames>
       <RefTableName>province</RefTableName>
     </foreign-key>
@@ -1177,15 +1171,15 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="316" parent="300" name="id_district">
-      <ColNames>id_district</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="317" parent="300" name="id_canton">
+    <index id="316" parent="300" name="FKhfb5yl6g94b1gj2c4mi1xin8c">
       <ColNames>id_canton</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="318" parent="300" name="id_province">
+    <index id="317" parent="300" name="FKt0ig9oeu8maija18vyykgcsqg">
+      <ColNames>id_district</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="318" parent="300" name="FKbyo5uymy3xi2yei0yv61cm7py">
       <ColNames>id_province</ColNames>
       <Type>btree</Type>
     </index>
@@ -1195,23 +1189,20 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="320" parent="301" name="id_canton">
-      <AutoIncrement>87</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="321" parent="301" name="id_province">
-      <DataType>tinyint(1)|0s</DataType>
-      <NotNull>1</NotNull>
+    <column id="321" parent="301" name="name_canton">
+      <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="322" parent="301" name="name_canton">
-      <DataType>varchar(45)|0s</DataType>
+    <column id="322" parent="301" name="id_province">
+      <DataType>tinyint|0s</DataType>
       <Position>3</Position>
     </column>
-    <foreign-key id="323" parent="301" name="canton_ibfk_1">
+    <foreign-key id="323" parent="301" name="FKmdphkagr68mw3dbhc9qpt76eq">
       <ColNames>id_province</ColNames>
-      <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_province</RefColNames>
       <RefTableName>province</RefTableName>
     </foreign-key>
@@ -1220,7 +1211,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="325" parent="301" name="id_province">
+    <index id="325" parent="301" name="FKmdphkagr68mw3dbhc9qpt76eq">
       <ColNames>id_province</ColNames>
       <Type>btree</Type>
     </index>
@@ -1230,22 +1221,21 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="327" parent="302" name="id_district">
-      <AutoIncrement>491</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="328" parent="302" name="id_canton">
-      <DataType>int|0s</DataType>
+    <column id="328" parent="302" name="name_district">
+      <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="329" parent="302" name="name_district">
-      <DataType>varchar(45)|0s</DataType>
+    <column id="329" parent="302" name="id_canton">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="330" parent="302" name="district_ibfk_1">
+    <foreign-key id="330" parent="302" name="FK6lc6wk5b4asxrjae5gb737gc">
       <ColNames>id_canton</ColNames>
-      <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_canton</RefColNames>
       <RefTableName>canton</RefTableName>
     </foreign-key>
@@ -1254,7 +1244,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="332" parent="302" name="id_canton">
+    <index id="332" parent="302" name="FK6lc6wk5b4asxrjae5gb737gc">
       <ColNames>id_canton</ColNames>
       <Type>btree</Type>
     </index>
@@ -1268,26 +1258,24 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="335" parent="303" name="name_employee">
-      <DataType>varchar(32)|0s</DataType>
+    <column id="335" parent="303" name="base_salary">
+      <DataType>double|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="336" parent="303" name="phone_number">
-      <DataType>varchar(32)|0s</DataType>
+    <column id="336" parent="303" name="name_employee">
+      <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="337" parent="303" name="base_salary">
-      <DataType>double|0s</DataType>
+    <column id="337" parent="303" name="phone_number">
+      <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
     <column id="338" parent="303" name="id_branch">
       <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <foreign-key id="339" parent="303" name="employee_ibfk_1">
+    <foreign-key id="339" parent="303" name="FKjfpslu9f2qn5xdfmdovvc40c0">
       <ColNames>id_branch</ColNames>
-      <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_branch</RefColNames>
       <RefTableName>branch</RefTableName>
     </foreign-key>
@@ -1296,7 +1284,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="341" parent="303" name="id_branch">
+    <index id="341" parent="303" name="FKjfpslu9f2qn5xdfmdovvc40c0">
       <ColNames>id_branch</ColNames>
       <Type>btree</Type>
     </index>
@@ -1306,17 +1294,16 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="343" parent="304" name="id_province">
-      <DataType>tinyint(1)|0s</DataType>
+      <DataType>tinyint|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
     <column id="344" parent="304" name="name_province">
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
     <column id="345" parent="304" name="zone_percentage">
-      <DataType>tinyint(1)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>tinyint|0s</DataType>
       <Position>3</Position>
     </column>
     <index id="346" parent="304" name="PRIMARY">

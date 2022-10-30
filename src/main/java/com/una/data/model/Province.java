@@ -2,34 +2,32 @@ package com.una.data.model;
 
 import jakarta.persistence.*;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.Collection;
 
 @Entity
 @Table(name = "province")
-public class Province {
+public class Province extends EntityParent {
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "id_province", nullable = false)
-    private Boolean id = false;
-
-    @Column(name = "name_province", length = 10)
+    @Column(name = "id_province")
+    private Byte idProvince;
+    @Basic
+    @Column(name = "name_province")
     private String nameProvince;
-
-    @Column(name = "zone_percentage", nullable = false)
+    @Basic
+    @Column(name = "zone_percentage")
     private Byte zonePercentage;
+    @OneToMany(mappedBy = "provinceByIdProvince")
+    private Collection<Branch> branchesByIdProvince;
+    @OneToMany(mappedBy = "provinceByIdProvince")
+    private Collection<Canton> cantonsByIdProvince;
 
-    @OneToMany(mappedBy = "idProvince")
-    private Set<Branch> branches = new LinkedHashSet<>();
-
-    @OneToMany(mappedBy = "idProvince")
-    private Set<Canton> cantons = new LinkedHashSet<>();
-
-    public Boolean getId() {
-        return id;
+    public Integer getId() {
+        return idProvince.intValue();
     }
 
-    public void setId(Boolean id) {
-        this.id = id;
+    public void setIdProvince(Byte idProvince) {
+        this.idProvince = idProvince;
     }
 
     public String getNameProvince() {
@@ -48,20 +46,19 @@ public class Province {
         this.zonePercentage = zonePercentage;
     }
 
-    public Set<Branch> getBranches() {
-        return branches;
+    public Collection<Branch> getBranchesByIdProvince() {
+        return branchesByIdProvince;
     }
 
-    public void setBranches(Set<Branch> branches) {
-        this.branches = branches;
+    public void setBranchesByIdProvince(Collection<Branch> branchesByIdProvince) {
+        this.branchesByIdProvince = branchesByIdProvince;
     }
 
-    public Set<Canton> getCantons() {
-        return cantons;
+    public Collection<Canton> getCantonsByIdProvince() {
+        return cantonsByIdProvince;
     }
 
-    public void setCantons(Set<Canton> cantons) {
-        this.cantons = cantons;
+    public void setCantonsByIdProvince(Collection<Canton> cantonsByIdProvince) {
+        this.cantonsByIdProvince = cantonsByIdProvince;
     }
-
 }

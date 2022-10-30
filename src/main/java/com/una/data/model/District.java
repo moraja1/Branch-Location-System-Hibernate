@@ -2,41 +2,30 @@ package com.una.data.model;
 
 import jakarta.persistence.*;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.Collection;
 
 @Entity
 @Table(name = "district")
-public class District {
-    @Id
+public class District extends EntityParent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_district", nullable = false)
-    private Integer id;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_canton")
-    private Canton idCanton;
-
-    @Column(name = "name_district", length = 45)
+    @Id
+    @Column(name = "id_district")
+    private Integer idDistrict;
+    @Basic
+    @Column(name = "name_district")
     private String nameDistrict;
-
-    @OneToMany(mappedBy = "idDistrict")
-    private Set<Branch> branches = new LinkedHashSet<>();
+    @OneToMany(mappedBy = "districtByIdDistrict")
+    private Collection<Branch> branchesByIdDistrict;
+    @ManyToOne
+    @JoinColumn(name = "id_canton", referencedColumnName = "id_canton")
+    private Canton cantonByIdCanton;
 
     public Integer getId() {
-        return id;
+        return idDistrict;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Canton getIdCanton() {
-        return idCanton;
-    }
-
-    public void setIdCanton(Canton idCanton) {
-        this.idCanton = idCanton;
+    public void setIdDistrict(Integer idDistrict) {
+        this.idDistrict = idDistrict;
     }
 
     public String getNameDistrict() {
@@ -47,12 +36,19 @@ public class District {
         this.nameDistrict = nameDistrict;
     }
 
-    public Set<Branch> getBranches() {
-        return branches;
+    public Collection<Branch> getBranchesByIdDistrict() {
+        return branchesByIdDistrict;
     }
 
-    public void setBranches(Set<Branch> branches) {
-        this.branches = branches;
+    public void setBranchesByIdDistrict(Collection<Branch> branchesByIdDistrict) {
+        this.branchesByIdDistrict = branchesByIdDistrict;
     }
 
+    public Canton getCantonByIdCanton() {
+        return cantonByIdCanton;
+    }
+
+    public void setCantonByIdCanton(Canton cantonByIdCanton) {
+        this.cantonByIdCanton = cantonByIdCanton;
+    }
 }

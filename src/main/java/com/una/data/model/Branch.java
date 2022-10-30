@@ -2,46 +2,42 @@ package com.una.data.model;
 
 import jakarta.persistence.*;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.Collection;
 
 @Entity
 @Table(name = "branch")
-public class Branch {
+public class Branch extends EntityParent {
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    @Column(name = "id_branch", nullable = false)
-    private Integer id;
-
-    @Column(name = "address", length = 32)
+    @Column(name = "id_branch")
+    private Integer idBranch;
+    @Basic
+    @Column(name = "address")
     private String address;
-
+    @Basic
     @Column(name = "coord_x")
     private Integer coordX;
-
+    @Basic
     @Column(name = "coord_y")
     private Integer coordY;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_district", nullable = false)
-    private District idDistrict;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_canton", nullable = false)
-    private Canton idCanton;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_province", nullable = false)
-    private Province idProvince;
-
-    @OneToMany(mappedBy = "idBranch")
-    private Set<Employee> employees = new LinkedHashSet<>();
+    @ManyToOne
+    @JoinColumn(name = "id_district", referencedColumnName = "id_district", nullable = false)
+    private District districtByIdDistrict;
+    @ManyToOne
+    @JoinColumn(name = "id_canton", referencedColumnName = "id_canton", nullable = false)
+    private Canton cantonByIdCanton;
+    @ManyToOne
+    @JoinColumn(name = "id_province", referencedColumnName = "id_province", nullable = false)
+    private Province provinceByIdProvince;
+    @OneToMany(mappedBy = "branchByIdBranch")
+    private Collection<Employee> employeesByIdBranch;
 
     public Integer getId() {
-        return id;
+        return idBranch;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdBranch(Integer idBranch) {
+        this.idBranch = idBranch;
     }
 
     public String getAddress() {
@@ -68,36 +64,35 @@ public class Branch {
         this.coordY = coordY;
     }
 
-    public District getIdDistrict() {
-        return idDistrict;
+    public District getDistrictByIdDistrict() {
+        return districtByIdDistrict;
     }
 
-    public void setIdDistrict(District idDistrict) {
-        this.idDistrict = idDistrict;
+    public void setDistrictByIdDistrict(District districtByIdDistrict) {
+        this.districtByIdDistrict = districtByIdDistrict;
     }
 
-    public Canton getIdCanton() {
-        return idCanton;
+    public Canton getCantonByIdCanton() {
+        return cantonByIdCanton;
     }
 
-    public void setIdCanton(Canton idCanton) {
-        this.idCanton = idCanton;
+    public void setCantonByIdCanton(Canton cantonByIdCanton) {
+        this.cantonByIdCanton = cantonByIdCanton;
     }
 
-    public Province getIdProvince() {
-        return idProvince;
+    public Province getProvinceByIdProvince() {
+        return provinceByIdProvince;
     }
 
-    public void setIdProvince(Province idProvince) {
-        this.idProvince = idProvince;
+    public void setProvinceByIdProvince(Province provinceByIdProvince) {
+        this.provinceByIdProvince = provinceByIdProvince;
     }
 
-    public Set<Employee> getEmployees() {
-        return employees;
+    public Collection<Employee> getEmployeesByIdBranch() {
+        return employeesByIdBranch;
     }
 
-    public void setEmployees(Set<Employee> employees) {
-        this.employees = employees;
+    public void setEmployeesByIdBranch(Collection<Employee> employeesByIdBranch) {
+        this.employeesByIdBranch = employeesByIdBranch;
     }
-
 }

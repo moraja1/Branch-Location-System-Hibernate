@@ -2,44 +2,32 @@ package com.una.data.model;
 
 import jakarta.persistence.*;
 
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.Collection;
 
 @Entity
 @Table(name = "canton")
-public class Canton {
-    @Id
+public class Canton extends EntityParent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_canton", nullable = false)
-    private Integer id;
-
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "id_province", nullable = false)
-    private Province idProvince;
-
-    @Column(name = "name_canton", length = 45)
+    @Id
+    @Column(name = "id_canton")
+    private Integer idCanton;
+    @Basic
+    @Column(name = "name_canton")
     private String nameCanton;
-
-    @OneToMany(mappedBy = "idCanton")
-    private Set<Branch> branches = new LinkedHashSet<>();
-
-    @OneToMany(mappedBy = "idCanton")
-    private Set<District> districts = new LinkedHashSet<>();
+    @OneToMany(mappedBy = "cantonByIdCanton")
+    private Collection<Branch> branchesByIdCanton;
+    @ManyToOne
+    @JoinColumn(name = "id_province", referencedColumnName = "id_province", nullable = false)
+    private Province provinceByIdProvince;
+    @OneToMany(mappedBy = "cantonByIdCanton")
+    private Collection<District> districtsByIdCanton;
 
     public Integer getId() {
-        return id;
+        return idCanton;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Province getIdProvince() {
-        return idProvince;
-    }
-
-    public void setIdProvince(Province idProvince) {
-        this.idProvince = idProvince;
+    public void setIdCanton(Integer idCanton) {
+        this.idCanton = idCanton;
     }
 
     public String getNameCanton() {
@@ -50,20 +38,27 @@ public class Canton {
         this.nameCanton = nameCanton;
     }
 
-    public Set<Branch> getBranches() {
-        return branches;
+    public Collection<Branch> getBranchesByIdCanton() {
+        return branchesByIdCanton;
     }
 
-    public void setBranches(Set<Branch> branches) {
-        this.branches = branches;
+    public void setBranchesByIdCanton(Collection<Branch> branchesByIdCanton) {
+        this.branchesByIdCanton = branchesByIdCanton;
     }
 
-    public Set<District> getDistricts() {
-        return districts;
+    public Province getProvinceByIdProvince() {
+        return provinceByIdProvince;
     }
 
-    public void setDistricts(Set<District> districts) {
-        this.districts = districts;
+    public void setProvinceByIdProvince(Province provinceByIdProvince) {
+        this.provinceByIdProvince = provinceByIdProvince;
     }
 
+    public Collection<District> getDistrictsByIdCanton() {
+        return districtsByIdCanton;
+    }
+
+    public void setDistrictsByIdCanton(Collection<District> districtsByIdCanton) {
+        this.districtsByIdCanton = districtsByIdCanton;
+    }
 }
