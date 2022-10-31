@@ -1,37 +1,28 @@
 package com.una.application;
 
+import com.una.data.dao.DAO;
 import com.una.data.model.Canton;
-import com.una.data.model.Province;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
+
+import java.util.List;
 
 public class Application {
-    private static final EntityManagerFactory emFactoryObj;
-    private static final String PERSISTENCE_UNIT_NAME = "SISE";
+    static DAO<Canton> dao = new DAO<Canton>() {
+        @Override
+        public List<Canton> getAllObjects() {
+            return null;
+        }
 
-    static {
-        emFactoryObj = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-    }
+        @Override
+        public Canton getSingleObject(Integer key) {
+            return null;
+        }
 
-    // This Method Is Used To Retrieve The 'EntityManager' Object
-    public static EntityManager getEntityManager() {
-        return emFactoryObj.createEntityManager();
-    }
-
-    public static void shutDown(){
-        emFactoryObj.close();
-    }
-
+        @Override
+        protected boolean hasDependencies() {
+            return false;
+        }
+    };
     public static void main(String[] args) {
-        EntityManager entityMgr = getEntityManager();
-        entityMgr.getTransaction().begin();
-        Canton province = entityMgr.find(Canton.class, 45);
-        entityMgr.getTransaction().commit();
-
-        entityMgr.close();
-        shutDown();
-
-        System.out.println(province.getNameCanton());
+        System.out.println(dao.exists(5));
     }
 }

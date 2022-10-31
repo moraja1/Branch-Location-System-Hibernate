@@ -7,7 +7,7 @@ import java.util.Collection;
 @Entity
 @Table(name = "branch")
 public class Branch extends EntityParent {
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id_branch")
     private Integer idBranch;
