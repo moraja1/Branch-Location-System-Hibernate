@@ -56,7 +56,7 @@ public abstract class DAO<T extends EntityParent>{
         boolean flag = true;
         entityManager = jpaUtil.getEntityManager();
         try{
-            if(exists(obj.getId()) && !hasDependencies()){
+            if(exists(obj.getId()) && !hasDependencies(obj)){
                 entityManager.getTransaction().begin();
                 entityManager.remove(obj);
                 entityManager.getTransaction().commit();
@@ -98,5 +98,5 @@ public abstract class DAO<T extends EntityParent>{
     }
     public abstract List<T> getAllObjects();
     public abstract T getSingleObject(Integer key);
-    protected abstract boolean hasDependencies();
+    protected abstract boolean hasDependencies(T obj);
 }

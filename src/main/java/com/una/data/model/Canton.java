@@ -1,5 +1,6 @@
 package com.una.data.model;
 
+import com.una.data.dao.CantonDAO;
 import jakarta.persistence.*;
 
 import java.util.Collection;
@@ -9,7 +10,7 @@ import java.util.Collection;
 @NamedQueries({
         @NamedQuery(name = "Canton.findById", query = "select c from Canton c where c.idCanton = :idCanton"),
         @NamedQuery(name = "Canton.findAll", query = "select c from Canton c"),
-        @NamedQuery(name = "Canton.findByProvinceById", query = "select c from Canton c where c.provinceById = :provinceById")
+        @NamedQuery(name = "Canton.findByProvince", query = "select c from Canton c where c.provinceById = :provinceById")
 })
 public class Canton extends EntityParent{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,27 +44,30 @@ public class Canton extends EntityParent{
         this.nameCanton = nameCanton;
     }
 
-    public Collection<Branch> getBranchesByIdCanton() {
+    public Collection<Branch> getBranches() {
+        if(branchesById == null){
+            branchesById = CantonDAO.getBranches(this);
+        }
         return branchesById;
     }
 
-    public void setBranchesByIdCanton(Collection<Branch> branchesByIdCanton) {
-        this.branchesById = branchesByIdCanton;
+    public void setBranches(Collection<Branch> branches) {
+        this.branchesById = branches;
     }
 
-    public Province getProvinceByIdProvince() {
+    public Province getProvince() {
         return provinceById;
     }
 
-    public void setProvinceByIdProvince(Province provinceByIdProvince) {
-        this.provinceById = provinceByIdProvince;
+    public void setProvince(Province province) {
+        this.provinceById = province;
     }
 
-    public Collection<District> getDistrictsByIdCanton() {
+    public Collection<District> getDistricts() {
         return districtsById;
     }
 
-    public void setDistrictsByIdCanton(Collection<District> districtsByIdCanton) {
-        this.districtsById = districtsByIdCanton;
+    public void setDistricts(Collection<District> districts) {
+        this.districtsById = districts;
     }
 }

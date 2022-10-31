@@ -1,5 +1,6 @@
 package com.una.data.model;
 
+import com.una.data.dao.ProvinceDAO;
 import jakarta.persistence.*;
 
 import java.util.Collection;
@@ -50,19 +51,22 @@ public class Province extends EntityParent {
         this.zonePercentage = zonePercentage;
     }
 
-    public Collection<Branch> getBranchesByIdProvince() {
+    public Collection<Branch> getBranches() {
+        if(branchesById == null){
+            branchesById = ProvinceDAO.getBranches(this);
+        }
         return branchesById;
     }
 
-    public void setBranchesByIdProvince(Collection<Branch> branchesByIdProvince) {
-        this.branchesById = branchesByIdProvince;
+    public void setBranches(Collection<Branch> branches) {
+        this.branchesById = branches;
     }
 
-    public Collection<Canton> getCantonsByIdProvince() {
+    public Collection<Canton> getCantons() {
         return cantonsById;
     }
 
-    public void setCantonsByIdProvince(Collection<Canton> cantonsByIdProvince) {
-        this.cantonsById = cantonsByIdProvince;
+    public void setCantons(Collection<Canton> cantons) {
+        this.cantonsById = cantons;
     }
 }

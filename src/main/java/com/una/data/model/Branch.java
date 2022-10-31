@@ -9,6 +9,9 @@ import java.util.Collection;
 @NamedQueries({
         @NamedQuery(name = "Branch.findById", query = "select b from Branch b where b.idBranch = :idBranch"),
         @NamedQuery(name = "Branch.findAll", query = "select b from Branch b"),
+        @NamedQuery(name = "Branch.findByDistrict", query = "select b from Branch b where b.districtById = :districtById"),
+        @NamedQuery(name = "Branch.findByCanton", query = "select b from Branch b where b.cantonById = :cantonById"),
+        @NamedQuery(name = "Branch.findByProvince", query = "select b from Branch b where b.provinceById = :provinceById")
 })
 public class Branch extends EntityParent{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -68,35 +71,35 @@ public class Branch extends EntityParent{
         this.coordY = coordY;
     }
 
-    public District getDistrictByIdDistrict() {
+    public District getDistrict() {
         return districtById;
     }
 
-    public void setDistrictByIdDistrict(District districtByIdDistrict) {
-        this.districtById = districtByIdDistrict;
+    public void setDistrict(District district) {
+        this.districtById = district;
     }
 
-    public Canton getCantonByIdCanton() {
+    public Canton getCanton() {
         return cantonById;
     }
 
-    public void setCantonByIdCanton(Canton cantonByIdCanton) {
+    public void setCanton(Canton cantonByIdCanton) {
         this.cantonById = cantonByIdCanton;
     }
 
-    public Province getProvinceByIdProvince() {
+    public Province getProvince() {
         return provinceById;
     }
 
-    public void setProvinceByIdProvince(Province provinceByIdProvince) {
-        this.provinceById = provinceByIdProvince;
+    public void setProvince(Province province) {
+        this.provinceById = province;
     }
 
-    public Collection<Employee> getEmployeesByIdBranch() {
+    public Collection<Employee> getEmployees() {
         return employeesById;
     }
 
-    public void setEmployeesByIdBranch(Collection<Employee> employeesByIdBranch) {
-        this.employeesById = employeesByIdBranch;
+    public void setEmployees(Collection<Employee> employees) {
+        this.employeesById = employees;
     }
 }

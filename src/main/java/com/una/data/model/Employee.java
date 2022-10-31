@@ -6,7 +6,8 @@ import jakarta.persistence.*;
 @Table(name = "employee")
 @NamedQueries({
         @NamedQuery(name = "Employee.findById", query = "select e from Employee e where e.idEmployee = :idEmployee"),
-        @NamedQuery(name = "Employee.findAll", query = "select e from Employee e")
+        @NamedQuery(name = "Employee.findAll", query = "select e from Employee e"),
+        @NamedQuery(name = "Employee.findByBranch", query = "select e from Employee e where e.branchById = :branchById")
 })
 
 public class Employee extends EntityParent {
@@ -59,11 +60,11 @@ public class Employee extends EntityParent {
         this.baseSalary = baseSalary;
     }
 
-    public Branch getBranchByIdBranch() {
+    public Branch getBranch() {
         return branchById;
     }
 
-    public void setBranchByIdBranch(Branch branchByIdBranch) {
-        this.branchById = branchByIdBranch;
+    public void setBranch(Branch branch) {
+        this.branchById = branch;
     }
 }

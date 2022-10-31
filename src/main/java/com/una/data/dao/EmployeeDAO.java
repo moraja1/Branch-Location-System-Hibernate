@@ -41,7 +41,7 @@ public class EmployeeDAO extends DAO<Employee> {
     }
 
     @Override
-    protected boolean hasDependencies() {
+    protected boolean hasDependencies(Employee obj) {
         return false;
     }
 }

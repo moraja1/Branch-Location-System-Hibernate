@@ -1,5 +1,6 @@
 package com.una.data.model;
 
+import com.una.data.dao.DistrictDAO;
 import jakarta.persistence.*;
 
 import java.util.Collection;
@@ -9,7 +10,7 @@ import java.util.Collection;
 @NamedQueries({
         @NamedQuery(name = "District.findById", query = "select d from District d where d.idDistrict = :idDistrict"),
         @NamedQuery(name = "District.findAll", query = "select d from District d"),
-        @NamedQuery(name = "District.findByCantonById", query = "select d from District d where d.cantonById = :cantonById")
+        @NamedQuery(name = "District.findByCanton", query = "select d from District d where d.cantonById = :cantonById")
 })
 public class District extends EntityParent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,19 +42,22 @@ public class District extends EntityParent {
         this.nameDistrict = nameDistrict;
     }
 
-    public Collection<Branch> getBranchesByIdDistrict() {
+    public Collection<Branch> getBranches() {
+        if(branchesById == null){
+            branchesById = DistrictDAO.getBranches(this);
+        }
         return branchesById;
     }
 
-    public void setBranchesByIdDistrict(Collection<Branch> branchesByIdDistrict) {
+    public void setBranches(Collection<Branch> branchesByIdDistrict) {
         this.branchesById = branchesByIdDistrict;
     }
 
-    public Canton getCantonByIdCanton() {
+    public Canton getCanton() {
         return cantonById;
     }
 
-    public void setCantonByIdCanton(Canton cantonByIdCanton) {
-        this.cantonById = cantonByIdCanton;
+    public void setCanton(Canton canton) {
+        this.cantonById = canton;
     }
 }
