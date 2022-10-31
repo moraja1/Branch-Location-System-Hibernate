@@ -57,7 +57,7 @@ public class MainWindowViewController {
         List<BranchDetails> branches = DataServices.getBranchesForTable();
         if(branches != null){
             for(BranchDetails branch : branches){
-                main_window.setBranchPointOnMap(branch);
+                main_window.setBranchPointOnMap(new BranchPointer(branch));
             }
         }
     }
@@ -66,7 +66,7 @@ public class MainWindowViewController {
     }
     public static void editEmployee() {
         Object[] model = getObjectModel();
-        MainController.changeWindow(EmployeeEditViewController.getEmployee_edit_view());
+        MainController.changeWindow(EmployeeAddViewController.getEmployee_edit_view(model));
     }
     public static void eraseEmployee() {
         Integer id = (Integer) getObjectModel()[0];

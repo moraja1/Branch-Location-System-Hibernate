@@ -52,6 +52,7 @@ public class BranchAddView extends ViewParent {
     }
 
     public BranchAddView(Object[] model) {
+        this();
         initComponents(model);
     }
 

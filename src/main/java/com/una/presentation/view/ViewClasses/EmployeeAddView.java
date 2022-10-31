@@ -3,6 +3,7 @@ package com.una.presentation.view.ViewClasses;
 import com.una.presentation.controller.ViewControllers.EmployeeAddViewController;
 import com.una.presentation.controller.ViewControllers.MainWindowViewController;
 import com.una.presentation.model.mouseListener.ImageMouseSensor;
+import com.una.presentation.model.viewModels.componentModels.BranchPointer;
 import com.una.presentation.view.ViewParent;
 import com.una.presentation.view.utils.GeneralUtilities;
 
@@ -24,7 +25,7 @@ public class EmployeeAddView extends ViewParent {
     private JLabel map_image;
     private JLayeredPane map_layered_pane;
     private GeneralUtilities utils;
-    private BranchInfo selectedBranch;
+    private BranchPointer selectedBranch;
 
     public EmployeeAddView() {
         dialog = new JDialog(this, true);
@@ -52,11 +53,23 @@ public class EmployeeAddView extends ViewParent {
         clearWindow();
     }
 
+    public EmployeeAddView(Object[] model) {
+        this();
+        initComponents(model);
+    }
+
     private void clearWindow() {
         add_emp_ced_text.setText("");
         add_emp_nombre_text.setText("");
         add_emp_tel_text.setText("");
         add_emp_salario_text.setText("");
+    }
+
+    private void initComponents(Object[] model) {
+        add_emp_ced_text.setText(String.valueOf(model[0]));
+        add_emp_nombre_text.setText(String.valueOf(model[1]));
+        add_emp_tel_text.setText(String.valueOf(model[2]));
+        add_emp_salario_text.setText(String.valueOf(model[3]));
     }
 
     @Override
@@ -154,22 +167,22 @@ public class EmployeeAddView extends ViewParent {
         map_image.addMouseListener(new ImageMouseSensor() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                java.util.List<Component> points = java.util.List.of(map_layered_pane.getComponentsInLayer(0));
-                java.util.List<BranchInfo> branches = (java.util.List<BranchInfo>)(java.util.List<?>) points;
-                for (BranchInfo branch : branches) {
-                    if(branch.isSelected()){
-                        branch.mouseClickedOutside(e);
+                List<Component> points = java.util.List.of(map_layered_pane.getComponentsInLayer(0));
+                List<BranchPointer> pointers = (List<BranchPointer>)(java.util.List<?>) points;
+                for (BranchPointer point : pointers) {
+                    if(point.isSelected()){
+                        point.mouseClickedOutside(e);
                     }
                 }
                 e.consume();
             }
             @Override
             public void mouseClickedOutside(MouseEvent e) {
-                java.util.List<Component> points = java.util.List.of(map_layered_pane.getComponentsInLayer(0));
-                java.util.List<BranchInfo> branches = (java.util.List<BranchInfo>)(java.util.List<?>) points;
-                for (BranchInfo branch : branches) {
-                    if(branch.isSelected()){
-                        selectedBranch = branch;
+                List<Component> points = java.util.List.of(map_layered_pane.getComponentsInLayer(0));
+                List<BranchPointer> pointers = (List<BranchPointer>)(java.util.List<?>) points;
+                for (BranchPointer point : pointers) {
+                    if(point.isSelected()){
+                        selectedBranch = point;
                     }
                 }
                 e.consume();
@@ -181,7 +194,7 @@ public class EmployeeAddView extends ViewParent {
         dialog.setVisible(true);
     }
 
-    public void setBranchPointOnMap(BranchInfo point){
+    public void setBranchPointOnMap(BranchPointer point){
         point.setVisible(false);
         int x = point.getX() + 242;
         int y = point.getY() - 41;
@@ -204,7 +217,7 @@ public class EmployeeAddView extends ViewParent {
     public String getEmployeeName() { return add_emp_nombre_text.getText();}
     public String getEmployeePhoneNumber() { return add_emp_tel_text.getText();}
     public String getEmployeeSalary(){ return add_emp_salario_text.getText();}
-    public BranchInfo getSelectedBranch() {
+    public BranchPointer getSelectedBranch() {
         return selectedBranch;
     }
 }

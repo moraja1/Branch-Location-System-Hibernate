@@ -27,6 +27,16 @@ public class EmployeeDetails implements Serializable {
         this.totalSalary = baseSalary + (baseSalary * (zonePercentage / 100));
     }
 
+    public EmployeeDetails(Integer idEmployee, String nameEmployee, String phoneNumber, Double baseSalary, String branchReference) {
+        this.idEmployee = idEmployee;
+        this.nameEmployee = nameEmployee;
+        this.phoneNumber = phoneNumber;
+        this.baseSalary = baseSalary;
+        this.branchReference = branchReference;
+        this.zonePercentage = 0;
+        this.totalSalary = 0.0;
+    }
+
     public EmployeeDetails(Integer idEmployee, String nameEmployee, String phoneNumber, Double baseSalary, String branchReference, Byte zonePercentage, Double totalSalary) {
         this.idEmployee = idEmployee;
         this.nameEmployee = nameEmployee;

@@ -20,7 +20,7 @@ public class DataServices {
     public static boolean removeEmployeeExecution(EmployeeDetails e) {
         return false;
     }
-    public static BranchDetails getBranchInfo(String key) {
+    public static BranchDetails getBranchInfo(Integer key) {
         return null;
     }
     public static boolean editEmployeeExecution(EmployeeDetails e, BranchDetails b) {
