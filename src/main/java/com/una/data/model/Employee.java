@@ -4,6 +4,11 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "employee")
+@NamedQueries({
+        @NamedQuery(name = "Employee.findById", query = "select e from Employee e where e.idEmployee = :idEmployee"),
+        @NamedQuery(name = "Employee.findAll", query = "select e from Employee e")
+})
+
 public class Employee extends EntityParent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -20,7 +25,7 @@ public class Employee extends EntityParent {
     private Double baseSalary;
     @ManyToOne
     @JoinColumn(name = "id_branch", referencedColumnName = "id_branch", nullable = false)
-    private Branch branchByIdBranch;
+    private Branch branchById;
 
     public Integer getId() {
         return idEmployee;
@@ -55,10 +60,10 @@ public class Employee extends EntityParent {
     }
 
     public Branch getBranchByIdBranch() {
-        return branchByIdBranch;
+        return branchById;
     }
 
     public void setBranchByIdBranch(Branch branchByIdBranch) {
-        this.branchByIdBranch = branchByIdBranch;
+        this.branchById = branchByIdBranch;
     }
 }

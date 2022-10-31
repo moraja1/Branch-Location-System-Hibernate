@@ -6,6 +6,10 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "province")
+@NamedQueries({
+        @NamedQuery(name = "Province.findById", query = "select p from Province p where p.idProvince = :idProvince"),
+        @NamedQuery(name = "Province.findAll", query = "select p from Province p")
+})
 public class Province extends EntityParent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -17,10 +21,10 @@ public class Province extends EntityParent {
     @Basic
     @Column(name = "zone_percentage")
     private Byte zonePercentage;
-    @OneToMany(mappedBy = "provinceByIdProvince")
-    private Collection<Branch> branchesByIdProvince;
-    @OneToMany(mappedBy = "provinceByIdProvince")
-    private Collection<Canton> cantonsByIdProvince;
+    @OneToMany(mappedBy = "provinceById")
+    private Collection<Branch> branchesById;
+    @OneToMany(mappedBy = "provinceById")
+    private Collection<Canton> cantonsById;
 
     public Integer getId() {
         return idProvince.intValue();
@@ -47,18 +51,18 @@ public class Province extends EntityParent {
     }
 
     public Collection<Branch> getBranchesByIdProvince() {
-        return branchesByIdProvince;
+        return branchesById;
     }
 
     public void setBranchesByIdProvince(Collection<Branch> branchesByIdProvince) {
-        this.branchesByIdProvince = branchesByIdProvince;
+        this.branchesById = branchesByIdProvince;
     }
 
     public Collection<Canton> getCantonsByIdProvince() {
-        return cantonsByIdProvince;
+        return cantonsById;
     }
 
     public void setCantonsByIdProvince(Collection<Canton> cantonsByIdProvince) {
-        this.cantonsByIdProvince = cantonsByIdProvince;
+        this.cantonsById = cantonsByIdProvince;
     }
 }

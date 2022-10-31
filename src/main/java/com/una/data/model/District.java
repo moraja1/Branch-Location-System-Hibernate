@@ -6,6 +6,11 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "district")
+@NamedQueries({
+        @NamedQuery(name = "District.findById", query = "select d from District d where d.idDistrict = :idDistrict"),
+        @NamedQuery(name = "District.findAll", query = "select d from District d"),
+        @NamedQuery(name = "District.findByCantonById", query = "select d from District d where d.cantonById = :cantonById")
+})
 public class District extends EntityParent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -14,11 +19,11 @@ public class District extends EntityParent {
     @Basic
     @Column(name = "name_district")
     private String nameDistrict;
-    @OneToMany(mappedBy = "districtByIdDistrict")
-    private Collection<Branch> branchesByIdDistrict;
+    @OneToMany(mappedBy = "districtById")
+    private Collection<Branch> branchesById;
     @ManyToOne
     @JoinColumn(name = "id_canton", referencedColumnName = "id_canton")
-    private Canton cantonByIdCanton;
+    private Canton cantonById;
 
     public Integer getId() {
         return idDistrict;
@@ -37,18 +42,18 @@ public class District extends EntityParent {
     }
 
     public Collection<Branch> getBranchesByIdDistrict() {
-        return branchesByIdDistrict;
+        return branchesById;
     }
 
     public void setBranchesByIdDistrict(Collection<Branch> branchesByIdDistrict) {
-        this.branchesByIdDistrict = branchesByIdDistrict;
+        this.branchesById = branchesByIdDistrict;
     }
 
     public Canton getCantonByIdCanton() {
-        return cantonByIdCanton;
+        return cantonById;
     }
 
     public void setCantonByIdCanton(Canton cantonByIdCanton) {
-        this.cantonByIdCanton = cantonByIdCanton;
+        this.cantonById = cantonByIdCanton;
     }
 }

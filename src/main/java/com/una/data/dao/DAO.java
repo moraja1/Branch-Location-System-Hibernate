@@ -9,6 +9,7 @@ import java.util.List;
 
 public abstract class DAO<T extends EntityParent>{
     private Class<T> typeOfT;
+    protected EntityManager entityManager;
     @SuppressWarnings("unchecked")
     public DAO(){
         this.typeOfT = (Class<T>)((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0];
@@ -16,7 +17,7 @@ public abstract class DAO<T extends EntityParent>{
 
     public boolean exists(Integer key){
         boolean flag = true;
-        EntityManager entityManager = jpaUtil.getEntityManager();
+        entityManager = jpaUtil.getEntityManager();
         try{
             if(entityManager.find(typeOfT, key) == null){
                 flag = false;
@@ -31,7 +32,7 @@ public abstract class DAO<T extends EntityParent>{
     }
     public boolean add(T obj){
         boolean flag = true;
-        EntityManager entityManager = jpaUtil.getEntityManager();
+        entityManager = jpaUtil.getEntityManager();
         try{
             if(exists(obj.getId())){
                 flag = false;
@@ -53,7 +54,7 @@ public abstract class DAO<T extends EntityParent>{
     }
     public boolean erase(T obj){
         boolean flag = true;
-        EntityManager entityManager = jpaUtil.getEntityManager();
+        entityManager = jpaUtil.getEntityManager();
         try{
             if(exists(obj.getId()) && !hasDependencies()){
                 entityManager.getTransaction().begin();
@@ -75,7 +76,7 @@ public abstract class DAO<T extends EntityParent>{
     }
     public boolean edit(T obj){
         boolean flag = true;
-        EntityManager entityManager = jpaUtil.getEntityManager();
+        entityManager = jpaUtil.getEntityManager();
         try{
             if(exists(obj.getId())){
                 entityManager.getTransaction().begin();

@@ -4,16 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Database connected and DAO started">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/data/jpa/jpaUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/91441e36-b72a-4493-9368-1a816cf5360f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/91441e36-b72a-4493-9368-1a816cf5360f.xml" afterDir="false" />
+    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Base DAO implemented">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/BranchDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/CantonDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DistrictDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/EmployeeDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/ProvinceDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/application/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Canton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Canton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/District.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/District.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/EntityParent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/EntityParent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Province.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Province.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +48,7 @@
       <map>
         <entry key="com.haulmont.jpb.jpaInspector" value="true" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
@@ -110,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667097248665</updated>
       <workItem from="1667097251038" duration="5266000" />
-      <workItem from="1667178064792" duration="1754000" />
+      <workItem from="1667178064792" duration="6043000" />
     </task>
     <task id="LOCAL-00001" summary="Intento 3541685486498 de que se conecte">
       <created>1667101136876</created>
@@ -126,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667110111233</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Base DAO implemented">
+      <created>1667181399374</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667181399374</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,47 +158,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Intento 3541685486498 de que se conecte" />
     <MESSAGE value="Database connected and DAO started" />
-    <option name="LAST_COMMIT_MESSAGE" value="Database connected and DAO started" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Base DAO implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base DAO implemented" />
   </component>
 </project>

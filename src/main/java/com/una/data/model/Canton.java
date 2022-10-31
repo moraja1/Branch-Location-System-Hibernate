@@ -6,7 +6,12 @@ import java.util.Collection;
 
 @Entity
 @Table(name = "canton")
-public class Canton extends EntityParent {
+@NamedQueries({
+        @NamedQuery(name = "Canton.findById", query = "select c from Canton c where c.idCanton = :idCanton"),
+        @NamedQuery(name = "Canton.findAll", query = "select c from Canton c"),
+        @NamedQuery(name = "Canton.findByProvinceById", query = "select c from Canton c where c.provinceById = :provinceById")
+})
+public class Canton extends EntityParent{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id_canton")
@@ -14,13 +19,13 @@ public class Canton extends EntityParent {
     @Basic
     @Column(name = "name_canton")
     private String nameCanton;
-    @OneToMany(mappedBy = "cantonByIdCanton")
-    private Collection<Branch> branchesByIdCanton;
+    @OneToMany(mappedBy = "cantonById")
+    private Collection<Branch> branchesById;
     @ManyToOne
     @JoinColumn(name = "id_province", referencedColumnName = "id_province", nullable = false)
-    private Province provinceByIdProvince;
-    @OneToMany(mappedBy = "cantonByIdCanton")
-    private Collection<District> districtsByIdCanton;
+    private Province provinceById;
+    @OneToMany(mappedBy = "cantonById")
+    private Collection<District> districtsById;
 
     public Integer getId() {
         return idCanton;
@@ -39,26 +44,26 @@ public class Canton extends EntityParent {
     }
 
     public Collection<Branch> getBranchesByIdCanton() {
-        return branchesByIdCanton;
+        return branchesById;
     }
 
     public void setBranchesByIdCanton(Collection<Branch> branchesByIdCanton) {
-        this.branchesByIdCanton = branchesByIdCanton;
+        this.branchesById = branchesByIdCanton;
     }
 
     public Province getProvinceByIdProvince() {
-        return provinceByIdProvince;
+        return provinceById;
     }
 
     public void setProvinceByIdProvince(Province provinceByIdProvince) {
-        this.provinceByIdProvince = provinceByIdProvince;
+        this.provinceById = provinceByIdProvince;
     }
 
     public Collection<District> getDistrictsByIdCanton() {
-        return districtsByIdCanton;
+        return districtsById;
     }
 
     public void setDistrictsByIdCanton(Collection<District> districtsByIdCanton) {
-        this.districtsByIdCanton = districtsByIdCanton;
+        this.districtsById = districtsByIdCanton;
     }
 }
