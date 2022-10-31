@@ -4,30 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Base DAO implemented">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/BranchDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/CantonDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/DistrictDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/EmployeeDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/ProvinceDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/91441e36-b72a-4493-9368-1a816cf5360f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/91441e36-b72a-4493-9368-1a816cf5360f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/application/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/BranchDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/BranchDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/CantonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/CantonDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DistrictDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DistrictDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/ProvinceDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/ProvinceDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Canton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Canton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/District.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/District.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Province.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Province.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="DAO finished and Presentation in develop">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/EmployeeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/EmployeeDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/LogInWindowViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/MainWindowViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/MainWindowViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/Forms/LogInWindow.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/BranchAddView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/BranchAddView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/EmployeeAddView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/EmployeeAddView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/LogInWindow.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +113,7 @@
       <updated>1667097248665</updated>
       <workItem from="1667097251038" duration="5266000" />
       <workItem from="1667178064792" duration="6043000" />
-      <workItem from="1667231614260" duration="14419000" />
+      <workItem from="1667231614260" duration="16265000" />
     </task>
     <task id="LOCAL-00001" summary="Intento 3541685486498 de que se conecte">
       <created>1667101136876</created>
@@ -150,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667181399374</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="DAO finished and Presentation in develop">
+      <created>1667254492774</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667254492774</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +164,7 @@
     <MESSAGE value="Intento 3541685486498 de que se conecte" />
     <MESSAGE value="Database connected and DAO started" />
     <MESSAGE value="Base DAO implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base DAO implemented" />
+    <MESSAGE value="DAO finished and Presentation in develop" />
+    <option name="LAST_COMMIT_MESSAGE" value="DAO finished and Presentation in develop" />
   </component>
 </project>
