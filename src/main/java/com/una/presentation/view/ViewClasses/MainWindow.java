@@ -55,11 +55,11 @@ public class MainWindow extends ViewParent {
             map_layered_pane = getLayeredPane();
 
             //Image about
-            image_logo = new JLabel(new ImageIcon("src\\resources\\UNA_logo.png"));
+            image_logo = new JLabel(new ImageIcon("src/main/resources/images/UNA_logo.png"));
             tab_about.add(image_logo, BorderLayout.CENTER);
 
             //Map Image
-            ImageIcon map = new ImageIcon("src\\resources\\Mapa_de_Costa_Rica_(cantones_y_distritos).png");
+            ImageIcon map = new ImageIcon("src/main/resources/images/Mapa_de_Costa_Rica_(cantones_y_distritos).png");
             Image resizer = map.getImage();
             resizer = resizer.getScaledInstance(700, 700,  java.awt.Image.SCALE_SMOOTH);
             map.setImage(resizer);

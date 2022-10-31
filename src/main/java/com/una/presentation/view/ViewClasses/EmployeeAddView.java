@@ -41,7 +41,7 @@ public class EmployeeAddView extends ViewParent {
             map_layered_pane = dialog.getLayeredPane();
 
             //Map Image
-            ImageIcon map = new ImageIcon("src\\resources\\Mapa_de_Costa_Rica_(cantones_y_distritos).png");
+            ImageIcon map = new ImageIcon("src/main/resources/images/Mapa_de_Costa_Rica_(cantones_y_distritos).png");
             Image resizer = map.getImage();
             resizer = resizer.getScaledInstance(700, 700,  java.awt.Image.SCALE_SMOOTH);
             map.setImage(resizer);

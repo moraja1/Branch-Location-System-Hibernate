@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="DAO finished and Presentation in develop">
+    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Presentation adapted">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/EmployeeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/EmployeeDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/LogInWindowViewController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/MainWindowViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/MainWindowViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/Forms/LogInWindow.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/model/viewModels/componentModels/BranchPointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/model/viewModels/componentModels/BranchPointer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/BranchAddView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/BranchAddView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/EmployeeAddView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/EmployeeAddView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/LogInWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/resources/CR_map_image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/CR_map_image.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/resources/Doodle_Map_of_Costa_Rica_With_States_generated.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/Doodle_Map_of_Costa_Rica_With_States_generated.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/resources/Mapa_de_Costa_Rica_(cantones_y_distritos).png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/Mapa_de_Costa_Rica_(cantones_y_distritos).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/resources/UNA_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/UNA_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/resources/Ubicación no seleccionada.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/Ubicación no seleccionada.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/resources/Ubicación seleccionada.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/Ubicación seleccionada.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/resources/logoESCINF.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/logoESCINF.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +116,7 @@
       <updated>1667097248665</updated>
       <workItem from="1667097251038" duration="5266000" />
       <workItem from="1667178064792" duration="6043000" />
-      <workItem from="1667231614260" duration="16265000" />
+      <workItem from="1667231614260" duration="16588000" />
     </task>
     <task id="LOCAL-00001" summary="Intento 3541685486498 de que se conecte">
       <created>1667101136876</created>
@@ -143,7 +146,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667254492774</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Presentation adapted">
+      <created>1667255914636</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667255914636</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Presentation adapted">
+      <created>1667255927370</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667255927370</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +182,7 @@
     <MESSAGE value="Database connected and DAO started" />
     <MESSAGE value="Base DAO implemented" />
     <MESSAGE value="DAO finished and Presentation in develop" />
-    <option name="LAST_COMMIT_MESSAGE" value="DAO finished and Presentation in develop" />
+    <MESSAGE value="Presentation adapted" />
+    <option name="LAST_COMMIT_MESSAGE" value="Presentation adapted" />
   </component>
 </project>

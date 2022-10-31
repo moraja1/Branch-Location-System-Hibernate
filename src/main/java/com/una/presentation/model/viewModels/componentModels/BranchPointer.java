@@ -45,9 +45,9 @@ public class BranchPointer extends JLabel implements MouseInputListener {
     private Icon getPointerImage(boolean temporary) {
         ImageIcon pointer;
         if(temporary){
-            pointer = new ImageIcon("src\\resources\\Ubicación no seleccionada.png");
+            pointer = new ImageIcon("src/main/resources/images/Ubicación no seleccionada.png");
         }else{
-            pointer = new ImageIcon("src\\resources\\Ubicación seleccionada.png");
+            pointer = new ImageIcon("src/main/resources/images/Ubicación seleccionada.png");
         }
         Image resizer = pointer.getImage();
         resizer = resizer.getScaledInstance(30, 30, Image.SCALE_SMOOTH);
