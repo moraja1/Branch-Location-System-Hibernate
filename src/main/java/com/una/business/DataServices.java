@@ -1,12 +1,7 @@
 package com.una.business;
 
-import com.una.business.dtoModels.BranchDetails;
-import com.una.business.dtoModels.EmployeeDetails;
-import com.una.business.dtoModels.ProvinceDetails;
-import com.una.data.dao.BranchDAO;
-import com.una.data.dao.DAO;
-import com.una.data.dao.EmployeeDAO;
-import com.una.data.dao.ProvinceDAO;
+import com.una.business.dtoModels.*;
+import com.una.data.dao.*;
 import com.una.data.jpa.jpaUtil;
 import com.una.data.model.Branch;
 import com.una.data.model.Employee;
@@ -81,5 +76,15 @@ public class DataServices {
 
     public static void systemClosed() {
         jpaUtil.shutDown();
+    }
+
+    public static List<CantonDetails> getCantonsByProvince(String nameProvince) {
+        CantonDAO dataDAO = new CantonDAO();
+        return dataDAO.getCantonsByNameProvince(nameProvince);
+    }
+
+    public static List<DistrictDetails> getDistrictsByCanton(String nameCanton) {
+        DistrictDAO dataDAO = new DistrictDAO();
+        return dataDAO.getDistrictsByCantonName(nameCanton);
     }
 }

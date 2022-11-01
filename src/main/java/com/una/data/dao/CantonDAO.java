@@ -1,5 +1,6 @@
 package com.una.data.dao;
 
+import com.una.business.dtoModels.CantonDetails;
 import com.una.data.jpa.jpaUtil;
 import com.una.data.model.Branch;
 import com.una.data.model.Canton;
@@ -44,6 +45,27 @@ public class CantonDAO extends DAO<Canton> {
         }
         entityManager.close();
         return canton;
+    }
+    public List<CantonDetails> getCantonsByNameProvince(String nameProvince){
+        List<Canton> persistedCantons;
+        EntityManager entityManager = jpaUtil.getEntityManager();
+        try{
+            TypedQuery<Canton> findCantons = entityManager.createNamedQuery("Canton.findByProvinceByName", Canton.class);
+            findCantons.setParameter("nameProvince", nameProvince);
+            persistedCantons = findCantons.getResultList();
+        }catch(Exception ex){
+            persistedCantons = new ArrayList<>();
+            ex.printStackTrace();
+        }
+        entityManager.close();
+        if(persistedCantons.isEmpty()){
+            return new ArrayList<>();
+        }
+        List<CantonDetails> cantons = new ArrayList<>();
+        for(Canton c : persistedCantons){
+            cantons.add(new CantonDetails(c));
+        }
+        return cantons;
     }
     public static List<District> getDistritcts(Canton canton){
         List<District> districts;

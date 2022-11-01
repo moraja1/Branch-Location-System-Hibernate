@@ -2,13 +2,14 @@ package com.una.presentation.controller.ViewControllers;
 
 import com.una.business.DataServices;
 import com.una.business.dtoModels.BranchDetails;
+import com.una.business.dtoModels.CantonDetails;
+import com.una.business.dtoModels.DistrictDetails;
 import com.una.business.dtoModels.ProvinceDetails;
 import com.una.presentation.model.viewModels.componentModels.BranchPointer;
 import com.una.presentation.view.ViewClasses.BranchAddView;
 import com.una.presentation.view.ViewParent;
 
 import javax.swing.*;
-import javax.swing.event.ListDataListener;
 import java.awt.*;
 import java.util.List;
 import java.util.Vector;
@@ -56,6 +57,19 @@ public class BranchAddViewController {
     public static void initProvinces() {
         List<ProvinceDetails> provinces = DataServices.getProvinces();
         branch_add_view.getProvince_combo().setModel(new DefaultComboBoxModel<>(new Vector<>(provinces)));
+    }
+
+    public static void provinceSelected() {
+        ProvinceDetails provinceDetails = (ProvinceDetails) branch_add_view.getProvince_combo().getSelectedItem();
+        List<CantonDetails> cantons = DataServices.getCantonsByProvince(provinceDetails.getNameProvince());
+        branch_add_view.getCanton_combo().setModel(new DefaultComboBoxModel<>(new Vector<>(cantons)));
+        branch_add_view.getCanton_combo().setEnabled(true);
+    }
+    public static void cantonSelected() {
+        CantonDetails cantonDetails = (CantonDetails) branch_add_view.getProvince_combo().getSelectedItem();
+        List<DistrictDetails> cantons = DataServices.getDistrictsByCanton(cantonDetails.getNameCanton());
+        branch_add_view.getCanton_combo().setModel(new DefaultComboBoxModel<>(new Vector<>(cantons)));
+        branch_add_view.getCanton_combo().setEnabled(true);
     }
 }
 

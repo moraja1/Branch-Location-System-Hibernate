@@ -1,5 +1,6 @@
 package com.una.data.dao;
 
+import com.una.business.dtoModels.DistrictDetails;
 import com.una.data.jpa.jpaUtil;
 import com.una.data.model.Branch;
 import com.una.data.model.District;
@@ -62,5 +63,8 @@ public class DistrictDAO extends DAO<District> {
             return true;
         }
         return false;
+    }
+    public List<DistrictDetails> getDistrictsByCantonName(String nameCanton) {
+        
     }
 }
