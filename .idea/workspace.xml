@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Implementing ComboBoxes for database">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/850cf992-3368-4775-9b9d-c0730fc7fe5c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/850cf992-3368-4775-9b9d-c0730fc7fe5c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/CantonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/CantonDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Canton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Canton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DistrictDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DistrictDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/District.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/District.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/BranchAddViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/BranchAddViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/BranchAddView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/BranchAddView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,10 +69,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ToolWindowRun.ShowToolbar": "false",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Program Files/JetBrains/IntelliJ IDEA 2022.2.3/lib/forms_rt.jar",
-    "project.structure.last.edited": "Modules",
+    "last_opened_file_path": "C:/Users/ESCINF/Desktop/ProyectProg3Hibernate",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   },
   "keyToStringList": {

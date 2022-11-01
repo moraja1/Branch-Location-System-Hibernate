@@ -1,8 +1,10 @@
 package com.una.data.dao;
 
+import com.una.business.dtoModels.CantonDetails;
 import com.una.business.dtoModels.DistrictDetails;
 import com.una.data.jpa.jpaUtil;
 import com.una.data.model.Branch;
+import com.una.data.model.Canton;
 import com.una.data.model.District;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
@@ -65,6 +67,24 @@ public class DistrictDAO extends DAO<District> {
         return false;
     }
     public List<DistrictDetails> getDistrictsByCantonName(String nameCanton) {
-        
+        List<District> persistedDistrict;
+        EntityManager entityManager = jpaUtil.getEntityManager();
+        try{
+            TypedQuery<District> findDistricts = entityManager.createNamedQuery("District.findByCantonByName", District.class);
+            findDistricts.setParameter("nameCanton", nameCanton);
+            persistedDistrict = findDistricts.getResultList();
+        }catch(Exception ex){
+            persistedDistrict = new ArrayList<>();
+            ex.printStackTrace();
+        }
+        entityManager.close();
+        if(persistedDistrict.isEmpty()){
+            return new ArrayList<>();
+        }
+        List<DistrictDetails> districts = new ArrayList<>();
+        for(District c : persistedDistrict){
+            districts.add(new DistrictDetails(c));
+        }
+        return districts;
     }
 }

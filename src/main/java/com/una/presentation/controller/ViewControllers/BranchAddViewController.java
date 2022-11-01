@@ -66,10 +66,10 @@ public class BranchAddViewController {
         branch_add_view.getCanton_combo().setEnabled(true);
     }
     public static void cantonSelected() {
-        CantonDetails cantonDetails = (CantonDetails) branch_add_view.getProvince_combo().getSelectedItem();
-        List<DistrictDetails> cantons = DataServices.getDistrictsByCanton(cantonDetails.getNameCanton());
-        branch_add_view.getCanton_combo().setModel(new DefaultComboBoxModel<>(new Vector<>(cantons)));
-        branch_add_view.getCanton_combo().setEnabled(true);
+        CantonDetails cantonDetails = (CantonDetails) branch_add_view.getCanton_combo().getSelectedItem();
+        List<DistrictDetails> districts = DataServices.getDistrictsByCanton(cantonDetails.getNameCanton());
+        branch_add_view.getDistrict_combo().setModel(new DefaultComboBoxModel<>(new Vector<>(districts)));
+        branch_add_view.getDistrict_combo().setEnabled(true);
     }
 }
 
