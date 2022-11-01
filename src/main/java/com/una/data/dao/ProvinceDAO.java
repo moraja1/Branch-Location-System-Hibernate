@@ -22,11 +22,10 @@ public class ProvinceDAO extends DAO<Province>{
                 p.setCantons(getCantons(p));
             }
         }catch(Exception ex){
-            provinces = null;
+            provinces = new ArrayList<>();
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return provinces;
     }
 
@@ -44,7 +43,6 @@ public class ProvinceDAO extends DAO<Province>{
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return province;
     }
     public static List<Canton> getCantons(Province province){
@@ -72,7 +70,6 @@ public class ProvinceDAO extends DAO<Province>{
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return branches;
     }
 

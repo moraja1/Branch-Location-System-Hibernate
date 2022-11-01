@@ -22,11 +22,10 @@ public class CantonDAO extends DAO<Canton> {
                 c.setDistricts(getDistritcts(c));
             }
         }catch(Exception ex){
-            cantons = null;
+            cantons = new ArrayList<>();
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return cantons;
     }
 
@@ -44,7 +43,6 @@ public class CantonDAO extends DAO<Canton> {
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return canton;
     }
     public static List<District> getDistritcts(Canton canton){
@@ -59,7 +57,6 @@ public class CantonDAO extends DAO<Canton> {
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return districts;
     }
     public static List<Branch> getBranches(Canton canton) {
@@ -74,7 +71,6 @@ public class CantonDAO extends DAO<Canton> {
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return branches;
     }
     @Override

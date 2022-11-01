@@ -27,7 +27,6 @@ public abstract class DAO<T extends EntityParent>{
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return flag;
     }
     public boolean add(T obj){
@@ -49,7 +48,6 @@ public abstract class DAO<T extends EntityParent>{
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return flag;
     }
     public boolean erase(T obj){
@@ -71,7 +69,6 @@ public abstract class DAO<T extends EntityParent>{
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return flag;
     }
     public boolean edit(T obj){
@@ -93,7 +90,6 @@ public abstract class DAO<T extends EntityParent>{
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return flag;
     }
     public abstract List<T> getAllObjects();

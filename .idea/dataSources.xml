@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="SISE" uuid="91441e36-b72a-4493-9368-1a816cf5360f">
+    <data-source source="LOCAL" name="MySQL" uuid="94a12a0f-112e-473f-a62f-735ab283a1ba">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/sise</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="SISE/Hibernate" uuid="850cf992-3368-4775-9b9d-c0730fc7fe5c">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/N00148095/Desktop/Git/ProyectProg3Hibernate/src/main/resources/META-INF/persistence.xml</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/sise</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>

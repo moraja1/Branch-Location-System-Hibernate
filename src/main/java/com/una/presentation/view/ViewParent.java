@@ -1,7 +1,11 @@
 package com.una.presentation.view;
 
+import com.una.presentation.controller.ViewControllers.MainWindowViewController;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 public abstract class ViewParent extends JFrame {
 

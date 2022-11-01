@@ -34,7 +34,6 @@ public class ProvinceDetails implements Serializable {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + "(" +
-                "nameProvince = " + nameProvince + ")";
+        return nameProvince;
     }
 }

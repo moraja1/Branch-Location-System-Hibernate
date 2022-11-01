@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BranchDAO extends DAO<Branch> {
+    public BranchDAO(){
+        super();
+    }
     @Override
     public List<Branch> getAllObjects() {
         List<Branch> branches;
@@ -25,7 +28,6 @@ public class BranchDAO extends DAO<Branch> {
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return branches;
     }
 
@@ -43,7 +45,6 @@ public class BranchDAO extends DAO<Branch> {
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return branch;
     }
     public static List<Employee> getEmployees(Branch branch){
@@ -58,7 +59,6 @@ public class BranchDAO extends DAO<Branch> {
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return employees;
     }
     @Override

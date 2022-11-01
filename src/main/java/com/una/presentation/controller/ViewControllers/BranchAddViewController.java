@@ -2,12 +2,16 @@ package com.una.presentation.controller.ViewControllers;
 
 import com.una.business.DataServices;
 import com.una.business.dtoModels.BranchDetails;
+import com.una.business.dtoModels.ProvinceDetails;
 import com.una.presentation.model.viewModels.componentModels.BranchPointer;
 import com.una.presentation.view.ViewClasses.BranchAddView;
 import com.una.presentation.view.ViewParent;
 
 import javax.swing.*;
+import javax.swing.event.ListDataListener;
 import java.awt.*;
+import java.util.List;
+import java.util.Vector;
 
 public class BranchAddViewController {
     private static BranchAddView branch_add_view;
@@ -23,7 +27,7 @@ public class BranchAddViewController {
     public static void addButtonPressed(){
         //Obtengo los valores
         Integer id = Integer.valueOf(branch_add_view.getBranchID());
-        String reference = branch_add_view.getBranchReference();
+        String reference = branch_add_view.getDistrict_combo().getName();
         String address = branch_add_view.getBranchDir();
         Byte zoning_percentage = Byte.valueOf(branch_add_view.getBranchZone());
         BranchPointer point = branch_add_view.getNewBranch();
@@ -47,6 +51,11 @@ public class BranchAddViewController {
     }
     public static void windowClosed(){
         MainWindowViewController.windowInitialized();
+    }
+
+    public static void initProvinces() {
+        List<ProvinceDetails> provinces = DataServices.getProvinces();
+        branch_add_view.getProvince_combo().setModel(new DefaultComboBoxModel<>(new Vector<>(provinces)));
     }
 }
 

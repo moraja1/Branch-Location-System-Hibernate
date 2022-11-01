@@ -23,7 +23,7 @@ import java.util.Date;
 import java.util.List;
 
 public class MainWindowViewController {
-    private static MainWindow main_window = new MainWindow();
+    private static final MainWindow main_window = new MainWindow();
 
     public static MainWindow getMain_window() {
         return main_window;
@@ -336,5 +336,9 @@ public class MainWindowViewController {
             }
         }
         return null;
+    }
+
+    public static void windowClosed() {
+        DataServices.systemClosed();
     }
 }

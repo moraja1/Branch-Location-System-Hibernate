@@ -23,7 +23,6 @@ public class DistrictDAO extends DAO<District> {
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return districts;
     }
 
@@ -40,7 +39,6 @@ public class DistrictDAO extends DAO<District> {
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return district;
     }
     public static List<Branch> getBranches(District district){

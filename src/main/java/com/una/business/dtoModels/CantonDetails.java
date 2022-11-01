@@ -34,7 +34,6 @@ public class CantonDetails implements Serializable {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + "(" +
-                "nameCanton = " + nameCanton + ")";
+        return nameCanton;
     }
 }

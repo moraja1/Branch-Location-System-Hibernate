@@ -5,6 +5,7 @@ import com.una.data.model.Branch;
 import com.una.data.model.Employee;
 import jakarta.persistence.TypedQuery;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeDAO extends DAO<Employee> {
@@ -16,11 +17,10 @@ public class EmployeeDAO extends DAO<Employee> {
             TypedQuery<Employee> query = entityManager.createNamedQuery("Employee.findAll", Employee.class);
             employees = query.getResultList();
         }catch(Exception ex){
-            employees = null;
+            employees = new ArrayList<>();
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return employees;
     }
 
@@ -36,7 +36,6 @@ public class EmployeeDAO extends DAO<Employee> {
             ex.printStackTrace();
         }
         entityManager.close();
-        jpaUtil.shutDown();
         return employee;
     }
 

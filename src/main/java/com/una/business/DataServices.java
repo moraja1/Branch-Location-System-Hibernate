@@ -2,8 +2,15 @@ package com.una.business;
 
 import com.una.business.dtoModels.BranchDetails;
 import com.una.business.dtoModels.EmployeeDetails;
+import com.una.business.dtoModels.ProvinceDetails;
+import com.una.data.dao.BranchDAO;
 import com.una.data.dao.DAO;
+import com.una.data.dao.EmployeeDAO;
+import com.una.data.dao.ProvinceDAO;
+import com.una.data.jpa.jpaUtil;
 import com.una.data.model.Branch;
+import com.una.data.model.Employee;
+import com.una.data.model.Province;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +18,27 @@ import java.util.List;
 public class DataServices {
     private static DAO dataDAO;
     public static List<EmployeeDetails> getEmployeesForTable() {
-        return new ArrayList<>();
+        dataDAO = new EmployeeDAO();
+        List<Employee> persistedEmployees = dataDAO.getAllObjects();
+        if(persistedEmployees.isEmpty()){
+            return new ArrayList<>();
+        }
+        List<EmployeeDetails> employeesForTable = new ArrayList<>();
+        for(Employee e : persistedEmployees){
+            employeesForTable.add(new EmployeeDetails(e));
+        }
+        return employeesForTable;
     }
     public static List<BranchDetails> getBranchesForTable() {
+        dataDAO = new BranchDAO();
+        List<Branch> persistedBranches = dataDAO.getAllObjects();
+        if(persistedBranches.isEmpty()){
+            return new ArrayList<>();
+        }
+        List<BranchDetails> branchesForTable = new ArrayList<>();
+        for(Branch b : persistedBranches){
+            branchesForTable.add(new BranchDetails(b));
+        }
         return new ArrayList<>();
     }
     public static boolean addEmployeeExecution(EmployeeDetails e, BranchDetails b) {
@@ -39,5 +64,22 @@ public class DataServices {
 
     public static boolean editBranchExecution(BranchDetails b) {
         return false;
+    }
+
+    public static List<ProvinceDetails> getProvinces() {
+        dataDAO = new ProvinceDAO();
+        List<Province> persistedProvinces = dataDAO.getAllObjects();
+        if(persistedProvinces.isEmpty()){
+            return new ArrayList<>();
+        }
+        List<ProvinceDetails> provinces = new ArrayList<>();
+        for(Province p : persistedProvinces){
+            provinces.add(new ProvinceDetails(p));
+        }
+        return provinces;
+    }
+
+    public static void systemClosed() {
+        jpaUtil.shutDown();
     }
 }

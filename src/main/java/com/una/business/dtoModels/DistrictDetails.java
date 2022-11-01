@@ -34,7 +34,6 @@ public class DistrictDetails implements Serializable {
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + "(" +
-                "nameDistrict = " + nameDistrict + ")";
+        return nameDistrict;
     }
 }
