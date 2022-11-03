@@ -14,6 +14,7 @@ public class EmployeeDetails implements Serializable {
     private final String phoneNumber;
     private final Double baseSalary;
     private final String branchReference;
+    private Integer branchId;
     private final Byte zonePercentage;
     private final Double totalSalary;
 
@@ -25,9 +26,10 @@ public class EmployeeDetails implements Serializable {
         this.branchReference = employee.getBranch().getDistrict().getNameDistrict();
         this.zonePercentage = employee.getBranch().getProvince().getZonePercentage();
         this.totalSalary = baseSalary + (baseSalary * (zonePercentage / 100));
+        this.branchId = employee.getBranch().getId();
     }
 
-    public EmployeeDetails(Integer idEmployee, String nameEmployee, String phoneNumber, Double baseSalary, String branchReference) {
+    public EmployeeDetails(Integer idEmployee, String nameEmployee, String phoneNumber, Double baseSalary, String branchReference, Integer branchID) {
         this.idEmployee = idEmployee;
         this.nameEmployee = nameEmployee;
         this.phoneNumber = phoneNumber;
@@ -70,6 +72,10 @@ public class EmployeeDetails implements Serializable {
         return zonePercentage;
     }
     public Double getTotalSalary() { return totalSalary; }
+
+    public Integer getBranchId() {
+        return branchId;
+    }
 
     @Override
     public boolean equals(Object o) {

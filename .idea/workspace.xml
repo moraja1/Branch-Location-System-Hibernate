@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Add, Edit and Erase Branch implemented">
+    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="ADD Employee implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/BranchInputParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/InputParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/EmployeeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/EmployeeDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/BranchAddViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/BranchAddViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/MainWindowViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/MainWindowViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/Forms/MainWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/Forms/MainWindow.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/EmployeeAddView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/EmployeeAddView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/MainWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +120,7 @@
       <workItem from="1667231614260" duration="16588000" />
       <workItem from="1667489351905" duration="246000" />
       <workItem from="1667489622686" duration="6325000" />
-      <workItem from="1667501340306" duration="7095000" />
+      <workItem from="1667501340306" duration="9763000" />
     </task>
     <task id="LOCAL-00001" summary="Intento 3541685486498 de que se conecte">
       <created>1667101136876</created>
@@ -183,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667506008774</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ADD Employee implemented">
+      <created>1667511597792</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667511597792</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +209,8 @@
     <MESSAGE value="DAO finished and Presentation in develop" />
     <MESSAGE value="Presentation adapted" />
     <MESSAGE value="Add, Edit and Erase Branch implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add, Edit and Erase Branch implemented" />
+    <MESSAGE value="ADD Employee implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD Employee implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

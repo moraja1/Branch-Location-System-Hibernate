@@ -36,9 +36,9 @@ public class EmployeeAddViewController {
 
         String reference = branchDetails.getReference();
 
-        EmployeeDetails employee = new EmployeeDetails(id, name, phone_number, salary, reference);
+        EmployeeDetails employee = new EmployeeDetails(id, name, phone_number, salary, reference, branch.getBranchID());
 
-        if(DataServices.addEmployeeExecution(employee, branchDetails)){
+        if(DataServices.addEmployeeExecution(employee)){
             JOptionPane.showMessageDialog(new JFrame(), "Empleado agregado correctamente", "Confirmación",
                     JOptionPane.INFORMATION_MESSAGE);
         }else{

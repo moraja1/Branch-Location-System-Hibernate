@@ -39,7 +39,9 @@ public class BranchDAO extends DAO<Branch> {
     public Branch getSingleObject(Integer key) {
         Branch branch = new Branch();
         Transaction transaction = null;
-        try(Session session = sessionFactory.openSession()){
+        Session session;
+        try{
+            session = sessionFactory.openSession();
             transaction = session.beginTransaction();
             TypedQuery<Branch> findBranch = session.createNamedQuery("Branch.findById", Branch.class);
             findBranch.setParameter("idBranch", key);

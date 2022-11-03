@@ -34,11 +34,11 @@ public class DataServices {
         }
         return branchesForTable;
     }
-    public static boolean addEmployeeExecution(EmployeeDetails e, BranchDetails b) {
+    public static boolean addEmployeeExecution(EmployeeDetails e) {
         Employee employee = InputParser.toEmployee(e);
 
         dataDAO = new BranchDAO();
-        Branch branch = (Branch) dataDAO.getSingleObject(b.getIdBranch());
+        Branch branch = (Branch) dataDAO.getSingleObject(e.getBranchId());
         employee.setBranch(branch);
         branch.addEmployee(employee);
 

@@ -12,6 +12,7 @@ import java.util.Collection;
         @NamedQuery(name = "Branch.findByDistrict", query = "select b from Branch b where b.districtById = :districtById"),
         @NamedQuery(name = "Branch.findByCanton", query = "select b from Branch b where b.cantonById = :cantonById"),
         @NamedQuery(name = "Branch.findByProvince", query = "select b from Branch b where b.provinceById = :provinceById"),
+
 })
 public class Branch extends EntityParent{
     @Id
