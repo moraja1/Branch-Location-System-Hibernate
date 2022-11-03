@@ -32,7 +32,7 @@ public class DataServices {
         for(Branch b : persistedBranches){
             branchesForTable.add(new BranchDetails(b));
         }
-        return new ArrayList<>();
+        return branchesForTable;
     }
     public static boolean addEmployeeExecution(EmployeeDetails e, BranchDetails b) {
         return false;
@@ -41,7 +41,12 @@ public class DataServices {
         return false;
     }
     public static BranchDetails getBranchInfo(Integer key) {
-        return new BranchDetails(new Branch());
+        dataDAO = new BranchDAO();
+        Branch branch = (Branch) dataDAO.getSingleObject(key);
+        if(branch == null){
+            return null;
+        }
+        return new BranchDetails(branch);
     }
     public static boolean editEmployeeExecution(EmployeeDetails e, BranchDetails b) {
         return false;
@@ -49,16 +54,18 @@ public class DataServices {
 
     public static boolean addBranchExecution(BranchDetailsInput b) {
         Branch newBranch = BranchInputParser.toBranch(b);
-        dataDAO = new BranchDAO();
         return dataDAO.add(newBranch);
     }
 
     public static boolean removeBranchExecution(BranchDetails b) {
-        return false;
+        dataDAO = new BranchDAO();
+        Branch branch = (Branch) dataDAO.getSingleObject(b.getIdBranch());
+        return dataDAO.erase(branch);
     }
 
-    public static boolean editBranchExecution(BranchDetails b) {
-        return false;
+    public static boolean editBranchExecution(BranchDetailsInput b) {
+        Branch newBranch = BranchInputParser.toBranch(b);
+        return dataDAO.edit(newBranch);
     }
 
     public static List<ProvinceDetails> getProvinces() {
@@ -96,5 +103,15 @@ public class DataServices {
         }
 
         return districts;
+    }
+
+    public static ReferenceDetails getReferenceDetails(Integer key) {
+        dataDAO = new BranchDAO();
+        Branch branch = (Branch) dataDAO.getSingleObject(key);
+        if(branch != null){
+            District district = branch.getDistrict();
+            return new ReferenceDetails(district);
+        }
+        return null;
     }
 }

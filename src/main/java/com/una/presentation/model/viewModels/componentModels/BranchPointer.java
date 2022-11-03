@@ -44,7 +44,7 @@ public class BranchPointer extends JLabel implements MouseInputListener {
 
     private Icon getPointerImage(boolean temporary) {
         ImageIcon pointer;
-        if(temporary){
+        if(!temporary){
             pointer = new ImageIcon("src/main/resources/images/Ubicación no seleccionada.png");
         }else{
             pointer = new ImageIcon("src/main/resources/images/Ubicación seleccionada.png");
@@ -70,7 +70,7 @@ public class BranchPointer extends JLabel implements MouseInputListener {
     @Override
     public void mouseEntered(MouseEvent e) {
         if(!selected){
-            setIcon(getPointerImage(false));
+            setIcon(getPointerImage(true));
         }
         e.consume();
     }
@@ -90,7 +90,7 @@ public class BranchPointer extends JLabel implements MouseInputListener {
     @Override
     public void mouseExited(MouseEvent e) {
         if(!selected){
-            setIcon(getPointerImage(true));
+            setIcon(getPointerImage(false));
         }
         e.consume();
     }

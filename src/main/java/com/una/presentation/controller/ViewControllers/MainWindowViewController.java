@@ -62,11 +62,11 @@ public class MainWindowViewController {
         }
     }
     public static void addEmployee() {
-        MainController.changeWindow(EmployeeAddViewController.getEmployee_add_view());
+        MainController.changeWindow(EmployeeAddViewController.getEmployee_add_view(), null);
     }
     public static void editEmployee() {
         Object[] model = getObjectModel();
-        MainController.changeWindow(EmployeeAddViewController.getEmployee_edit_view(model));
+        MainController.changeWindow(EmployeeAddViewController.getEmployee_add_view(), model);
     }
     public static void eraseEmployee() {
         Integer id = (Integer) getObjectModel()[0];
@@ -174,11 +174,11 @@ public class MainWindowViewController {
     }
 
     public static void addBranch() {
-        MainController.changeWindow(BranchAddViewController.getBranch_add_view());
+        MainController.changeWindow(BranchAddViewController.getBranch_add_view(), null);
     }
     public static void editBranch() {
         Object[] model = getObjectModel();
-        MainController.changeWindow(BranchAddViewController.getBranch_edit_view(model));
+        MainController.changeWindow(BranchAddViewController.getBranch_add_view(), model);
     }
     public static void eraseBranch() {
         Integer id = (Integer) getObjectModel()[0];

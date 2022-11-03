@@ -8,7 +8,7 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 public abstract class ViewParent extends JFrame {
-
+    protected JDialog dialog;
     public ViewParent(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
@@ -20,4 +20,10 @@ public abstract class ViewParent extends JFrame {
      * Initialize window components of every class that extends this superclass.
      */
     public abstract void initComponents();
+
+    public abstract void initComponents(Object[] model);
+
+    public JDialog getDialog() {
+        return dialog;
+    }
 }

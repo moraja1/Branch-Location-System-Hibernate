@@ -39,7 +39,6 @@ public abstract class DAO<T extends EntityParent>{
         try{
             session = sessionFactory.openSession();
             transaction = session.beginTransaction();
-
             session.persist(obj);
             transaction.commit();
         }catch(Exception ex){

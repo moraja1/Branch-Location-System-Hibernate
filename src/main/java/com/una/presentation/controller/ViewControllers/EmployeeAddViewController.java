@@ -16,10 +16,6 @@ public class EmployeeAddViewController {
         employee_add_view = new EmployeeAddView();
         return employee_add_view;
     }
-    public static EmployeeAddView getEmployee_edit_view(Object[] model) {
-        employee_add_view = new EmployeeAddView(model);
-        return employee_add_view;
-    }
     public static void windowInitialized() {
         updateImages();
     }

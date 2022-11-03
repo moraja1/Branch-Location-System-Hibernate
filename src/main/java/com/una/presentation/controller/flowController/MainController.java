@@ -33,7 +33,11 @@ public class MainController {
      * Alternate within existent windows.
      * @param newView
      */
-    public static void changeWindow(ViewParent newView){
+    public static void changeWindow(ViewParent newView, Object[] model){
         newView.initComponents();
+        if(model != null) {
+            newView.initComponents(model);
+        }
+        newView.getDialog().setVisible(true);
     }
 }

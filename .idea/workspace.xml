@@ -5,41 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Presentation adapted">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/business/BranchInputParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/data/util/HibernateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/dto/BranchDetailsInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/ReferenceDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/850cf992-3368-4775-9b9d-c0730fc7fe5c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/850cf992-3368-4775-9b9d-c0730fc7fe5c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94a12a0f-112e-473f-a62f-735ab283a1ba.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94a12a0f-112e-473f-a62f-735ab283a1ba/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94a12a0f-112e-473f-a62f-735ab283a1ba/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94a12a0f-112e-473f-a62f-735ab283a1ba/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94a12a0f-112e-473f-a62f-735ab283a1ba/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2022_15_20__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2022_15_20__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/application/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/CantonDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/CantonDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/DistrictDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/DistrictDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/ProvinceDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/ProvinceDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/BranchDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/BranchDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/CantonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/CantonDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DistrictDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DistrictDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/ProvinceDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/ProvinceDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/jpa/jpaUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Canton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Canton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/District.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/District.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Province.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Province.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/BranchAddViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/BranchAddViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/MainWindowViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/MainWindowViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/Forms/BranchAddView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/Forms/BranchAddView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/flowController/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/flowController/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/model/viewModels/componentModels/BranchPointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/model/viewModels/componentModels/BranchPointer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/BranchAddView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/BranchAddView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/EmployeeAddView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/EmployeeAddView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewParent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewParent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/Hibernate/hibernate-cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/Hibernate/hibernate-cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,26 +72,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JPA.DatabaseSchemaImportDialog": "91441e36-b72a-4493-9368-1a816cf5360f",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindowRun.ShowToolbar": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/git/ProyectProg3Hibernate/src/main/java/com/una/data/jpa",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;91441e36-b72a-4493-9368-1a816cf5360f&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/N00147948/Desktop/Git/ProyectProg3Hibernate&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propGUI&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\git\ProyectProg3Hibernate\src\main\java\com\una\data\jpa" />
@@ -148,6 +132,9 @@
       <workItem from="1667097251038" duration="5266000" />
       <workItem from="1667178064792" duration="6043000" />
       <workItem from="1667231614260" duration="16588000" />
+      <workItem from="1667489351905" duration="246000" />
+      <workItem from="1667489622686" duration="6325000" />
+      <workItem from="1667501340306" duration="1982000" />
     </task>
     <task id="LOCAL-00001" summary="Intento 3541685486498 de que se conecte">
       <created>1667101136876</created>
@@ -215,5 +202,21 @@
     <MESSAGE value="DAO finished and Presentation in develop" />
     <MESSAGE value="Presentation adapted" />
     <option name="LAST_COMMIT_MESSAGE" value="Presentation adapted" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/una/presentation/model/viewModels/componentModels/BranchPointer.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/una/presentation/model/viewModels/componentModels/BranchPointer.java</url>
+          <line>128</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -13,7 +13,6 @@
           <node kind="schema" qname="sise" />
         </introspection-scope>
       </schema-mapping>
-      <load-sources>user_sources</load-sources>
     </data-source>
   </component>
 </project>
