@@ -1,9 +1,9 @@
 package com.una.data.dao;
 
-import com.una.data.jpa.jpaUtil;
-import com.una.data.model.Branch;
 import com.una.data.model.Employee;
 import jakarta.persistence.TypedQuery;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,31 +11,40 @@ import java.util.List;
 public class EmployeeDAO extends DAO<Employee> {
     @Override
     public List<Employee> getAllObjects() {
-        List<Employee> employees;
-        entityManager = jpaUtil.getEntityManager();
-        try{
-            TypedQuery<Employee> query = entityManager.createNamedQuery("Employee.findAll", Employee.class);
+        Transaction transaction = null;
+        List<Employee> employees = new ArrayList<>();
+        try(Session session = sessionFactory.openSession()){
+            transaction = session.beginTransaction();
+            TypedQuery<Employee> query = session.createNamedQuery("Employee.findAll", Employee.class);
             employees = query.getResultList();
+            transaction.commit();
         }catch(Exception ex){
-            employees = new ArrayList<>();
+            if (transaction != null) {
+                transaction.rollback();
+            }
             ex.printStackTrace();
+            return null;
         }
-        entityManager.close();
         return employees;
     }
 
     @Override
     public Employee getSingleObject(Integer key) {
-        Employee employee;
-        entityManager = jpaUtil.getEntityManager();
-        try{
-            TypedQuery<Employee> query = entityManager.createNamedQuery("Employee.findById", Employee.class);
+        Transaction transaction = null;
+        Employee employee = new Employee();
+        try(Session session = sessionFactory.openSession()){
+            transaction = session.beginTransaction();
+            TypedQuery<Employee> query = session.createNamedQuery("Employee.findById", Employee.class);
+            query.setParameter("idEmployee", key);
             employee = query.getSingleResult();
+            transaction.commit();
         }catch(Exception ex){
-            employee = null;
+            if (transaction != null) {
+                transaction.rollback();
+            }
             ex.printStackTrace();
+            return null;
         }
-        entityManager.close();
         return employee;
     }
 

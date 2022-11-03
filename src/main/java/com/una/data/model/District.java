@@ -11,7 +11,8 @@ import java.util.Collection;
         @NamedQuery(name = "District.findById", query = "select d from District d where d.idDistrict = :idDistrict"),
         @NamedQuery(name = "District.findAll", query = "select d from District d"),
         @NamedQuery(name = "District.findByCanton", query = "select d from District d where d.cantonById = :cantonById"),
-        @NamedQuery(name = "District.findByCantonByName", query = "select d from District d where d.cantonById.nameCanton = :nameCanton")
+        @NamedQuery(name = "District.findByCantonByName", query = "select d from District d where d.cantonById.nameCanton = :nameCanton"),
+        @NamedQuery(name = "District.findByNameDistrict", query = "select d from District d where d.nameDistrict = :nameDistrict")
 })
 public class District extends EntityParent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)

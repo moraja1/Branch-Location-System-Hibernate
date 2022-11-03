@@ -1,10 +1,10 @@
 package com.una.presentation.controller.ViewControllers;
 
 import com.una.business.DataServices;
-import com.una.business.dtoModels.BranchDetails;
 import com.una.business.dtoModels.CantonDetails;
 import com.una.business.dtoModels.DistrictDetails;
 import com.una.business.dtoModels.ProvinceDetails;
+import com.una.presentation.controller.dto.BranchDetailsInput;
 import com.una.presentation.model.viewModels.componentModels.BranchPointer;
 import com.una.presentation.view.ViewClasses.BranchAddView;
 import com.una.presentation.view.ViewParent;
@@ -28,12 +28,13 @@ public class BranchAddViewController {
     public static void addButtonPressed(){
         //Obtengo los valores
         Integer id = Integer.valueOf(branch_add_view.getBranchID());
-        String reference = branch_add_view.getDistrict_combo().getName();
+        Integer districtId = ((DistrictDetails)branch_add_view.getDistrict_combo().getSelectedItem()).getIdDistrict();
+        Integer cantonId = ((CantonDetails)branch_add_view.getCanton_combo().getSelectedItem()).getIdCanton();
+        Byte provinceId = ((ProvinceDetails)branch_add_view.getProvince_combo().getSelectedItem()).getIdProvince();
         String address = branch_add_view.getBranchDir();
-        Byte zoning_percentage = Byte.valueOf(branch_add_view.getBranchZone());
         BranchPointer point = branch_add_view.getNewBranch();
 
-        BranchDetails branch = new BranchDetails(id, address, point.getCoordX(), point.getCoordY(), reference, zoning_percentage);
+        BranchDetailsInput branch = new BranchDetailsInput(id, address, point.getCoordX(), point.getCoordY(), districtId, cantonId, provinceId);
 
         if(DataServices.addBranchExecution(branch)){
             JOptionPane.showMessageDialog(new JFrame(), "Sucursal agregada correctamente", "Confirmación",
@@ -60,16 +61,21 @@ public class BranchAddViewController {
     }
 
     public static void provinceSelected() {
-        ProvinceDetails provinceDetails = (ProvinceDetails) branch_add_view.getProvince_combo().getSelectedItem();
-        List<CantonDetails> cantons = DataServices.getCantonsByProvince(provinceDetails.getNameProvince());
-        branch_add_view.getCanton_combo().setModel(new DefaultComboBoxModel<>(new Vector<>(cantons)));
-        branch_add_view.getCanton_combo().setEnabled(true);
+        ProvinceDetails provinceDetails = (ProvinceDetails) branch_add_view.getProvince_combo().getModel().getSelectedItem();
+        if(provinceDetails != null){
+            List<CantonDetails> cantons = DataServices.getCantonsByProvince(provinceDetails.getNameProvince());
+            branch_add_view.getCanton_combo().setModel(new DefaultComboBoxModel<>(new Vector<>(cantons)));
+            branch_add_view.getCanton_combo().setEnabled(true);
+            branch_add_view.getAdd_branch_zon_text().setText(String.valueOf(provinceDetails.getZonePercentage()));
+        }
     }
     public static void cantonSelected() {
-        CantonDetails cantonDetails = (CantonDetails) branch_add_view.getCanton_combo().getSelectedItem();
-        List<DistrictDetails> districts = DataServices.getDistrictsByCanton(cantonDetails.getNameCanton());
-        branch_add_view.getDistrict_combo().setModel(new DefaultComboBoxModel<>(new Vector<>(districts)));
-        branch_add_view.getDistrict_combo().setEnabled(true);
+        CantonDetails cantonDetails = (CantonDetails) branch_add_view.getCanton_combo().getModel().getSelectedItem();
+        if(cantonDetails != null){
+            List<DistrictDetails> districts = DataServices.getDistrictsByCanton(cantonDetails.getNameCanton());
+            branch_add_view.getDistrict_combo().setModel(new DefaultComboBoxModel<>(new Vector<>(districts)));
+            branch_add_view.getDistrict_combo().setEnabled(true);
+        }
     }
 }
 

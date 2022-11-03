@@ -56,7 +56,10 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <editable value="false"/>
+          <enabled value="false"/>
+        </properties>
       </component>
       <component id="2e924" class="javax.swing.JButton" binding="add_branch_guardar_btn">
         <constraints>

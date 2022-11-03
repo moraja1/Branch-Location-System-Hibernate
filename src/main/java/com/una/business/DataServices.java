@@ -2,10 +2,8 @@ package com.una.business;
 
 import com.una.business.dtoModels.*;
 import com.una.data.dao.*;
-import com.una.data.jpa.jpaUtil;
-import com.una.data.model.Branch;
-import com.una.data.model.Employee;
-import com.una.data.model.Province;
+import com.una.data.model.*;
+import com.una.presentation.controller.dto.BranchDetailsInput;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,8 +47,10 @@ public class DataServices {
         return false;
     }
 
-    public static boolean addBranchExecution(BranchDetails b) {
-        return false;
+    public static boolean addBranchExecution(BranchDetailsInput b) {
+        Branch newBranch = BranchInputParser.toBranch(b);
+        dataDAO = new BranchDAO();
+        return dataDAO.add(newBranch);
     }
 
     public static boolean removeBranchExecution(BranchDetails b) {
@@ -74,17 +74,27 @@ public class DataServices {
         return provinces;
     }
 
-    public static void systemClosed() {
-        jpaUtil.shutDown();
-    }
-
     public static List<CantonDetails> getCantonsByProvince(String nameProvince) {
         CantonDAO dataDAO = new CantonDAO();
-        return dataDAO.getCantonsByNameProvince(nameProvince);
+        List<Canton> persistedCantons = dataDAO.getCantonsByNameProvince(nameProvince);
+
+        List<CantonDetails> cantons = new ArrayList<>();
+        for(Canton c : persistedCantons){
+            cantons.add(new CantonDetails(c));
+        }
+
+        return cantons;
     }
 
     public static List<DistrictDetails> getDistrictsByCanton(String nameCanton) {
         DistrictDAO dataDAO = new DistrictDAO();
-        return dataDAO.getDistrictsByCantonName(nameCanton);
+        List<District> persistedDistrict = dataDAO.getDistrictsByCantonName(nameCanton);
+
+        List<DistrictDetails> districts = new ArrayList<>();
+        for(District c : persistedDistrict){
+            districts.add(new DistrictDetails(c));
+        }
+
+        return districts;
     }
 }

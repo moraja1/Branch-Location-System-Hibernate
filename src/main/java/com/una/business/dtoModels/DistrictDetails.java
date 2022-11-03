@@ -9,10 +9,16 @@ import java.util.Objects;
  * A DTO for the {@link com.una.data.model.District} entity
  */
 public class DistrictDetails implements Serializable {
-    private String nameDistrict;
+    private final Integer idDistrict;
+    private final String nameDistrict;
 
     public DistrictDetails(District district){
+        this.idDistrict = district.getId();
         this.nameDistrict = district.getNameDistrict();
+    }
+
+    public Integer getIdDistrict() {
+        return idDistrict;
     }
 
     public String getNameDistrict() {

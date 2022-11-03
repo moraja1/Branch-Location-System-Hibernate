@@ -337,8 +337,4 @@ public class MainWindowViewController {
         }
         return null;
     }
-
-    public static void windowClosed() {
-        DataServices.systemClosed();
-    }
 }

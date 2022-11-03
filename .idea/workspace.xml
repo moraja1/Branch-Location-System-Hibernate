@@ -4,15 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Implementing ComboBoxes for database">
+    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Presentation adapted">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/business/BranchInputParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/data/util/HibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/dto/BranchDetailsInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/850cf992-3368-4775-9b9d-c0730fc7fe5c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/850cf992-3368-4775-9b9d-c0730fc7fe5c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94a12a0f-112e-473f-a62f-735ab283a1ba.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94a12a0f-112e-473f-a62f-735ab283a1ba/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94a12a0f-112e-473f-a62f-735ab283a1ba/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94a12a0f-112e-473f-a62f-735ab283a1ba/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/94a12a0f-112e-473f-a62f-735ab283a1ba/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/application/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/application/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/CantonDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/CantonDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/DistrictDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/DistrictDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/ProvinceDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/ProvinceDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/BranchDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/BranchDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/CantonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/CantonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DistrictDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DistrictDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/EmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/ProvinceDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/ProvinceDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/jpa/jpaUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Canton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Canton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/District.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/District.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Province.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Province.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/BranchAddViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/BranchAddViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/MainWindowViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/MainWindowViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/Forms/BranchAddView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/Forms/BranchAddView.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/BranchAddView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/BranchAddView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +50,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="com.haulmont.jpb.JpaEntity" />
-        <option value="com.haulmont.jpb.NewClass" />
         <option value="Class" />
+        <option value="com.haulmont.jpb.NewClass" />
       </list>
     </option>
   </component>
@@ -69,10 +96,10 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ToolWindowRun.ShowToolbar": "false",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ESCINF/Desktop/ProyectProg3Hibernate",
-    "project.structure.last.edited": "Project",
+    "last_opened_file_path": "D:/git/ProyectProg3Hibernate/src/main/java/com/una/data/jpa",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   },
   "keyToStringList": {
@@ -82,6 +109,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\git\ProyectProg3Hibernate\src\main\java\com\una\data\jpa" />
+    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.una.data.model" />
       <recent name="" />
@@ -117,11 +147,7 @@
       <updated>1667097248665</updated>
       <workItem from="1667097251038" duration="5266000" />
       <workItem from="1667178064792" duration="6043000" />
-      <workItem from="1667231614260" duration="16685000" />
-      <workItem from="1667311809909" duration="851000" />
-      <workItem from="1667315477068" duration="6921000" />
-      <workItem from="1667334545955" duration="1295000" />
-      <workItem from="1667336007819" duration="3897000" />
+      <workItem from="1667231614260" duration="16588000" />
     </task>
     <task id="LOCAL-00001" summary="Intento 3541685486498 de que se conecte">
       <created>1667101136876</created>
@@ -165,21 +191,7 @@
       <option name="project" value="LOCAL" />
       <updated>1667255927370</updated>
     </task>
-    <task id="LOCAL-00007" summary="Presentation adapted">
-      <created>1667256297647</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1667256297647</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Implementing ComboBoxes for database">
-      <created>1667339539008</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1667339539008</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,17 +214,6 @@
     <MESSAGE value="Base DAO implemented" />
     <MESSAGE value="DAO finished and Presentation in develop" />
     <MESSAGE value="Presentation adapted" />
-    <MESSAGE value="Implementing ComboBoxes for database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing ComboBoxes for database" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
-          <option name="timeStamp" value="8" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="Presentation adapted" />
   </component>
 </project>

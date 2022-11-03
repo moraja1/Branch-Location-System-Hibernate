@@ -9,10 +9,16 @@ import java.util.Objects;
  * A DTO for the {@link com.una.data.model.Canton} entity
  */
 public class CantonDetails implements Serializable {
-    private String nameCanton;
+    private final Integer idCanton;
+    private final String nameCanton;
 
     public CantonDetails(Canton canton){
+        this.idCanton = canton.getId();
         this.nameCanton = canton.getNameCanton();
+    }
+
+    public Integer getIdCanton() {
+        return idCanton;
     }
 
     public String getNameCanton() {

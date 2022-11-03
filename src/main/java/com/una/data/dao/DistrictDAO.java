@@ -1,15 +1,13 @@
 package com.una.data.dao;
 
-import com.una.business.dtoModels.CantonDetails;
-import com.una.business.dtoModels.DistrictDetails;
-import com.una.data.jpa.jpaUtil;
 import com.una.data.model.Branch;
-import com.una.data.model.Canton;
 import com.una.data.model.District;
-import jakarta.persistence.EntityManager;
+import com.una.data.util.HibernateUtil;
 import jakarta.persistence.TypedQuery;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DistrictDAO extends DAO<District> {
@@ -17,46 +15,58 @@ public class DistrictDAO extends DAO<District> {
     @Override
     public List<District> getAllObjects() {
         List<District> districts;
-        entityManager = jpaUtil.getEntityManager();
-        try{
-            TypedQuery<District> findDistricts = entityManager.createNamedQuery("District.findAll", District.class);
+        Transaction transaction = null;
+        try(Session session = sessionFactory.openSession()){
+            transaction = session.beginTransaction();
+            TypedQuery<District> findDistricts = session.createNamedQuery("District.findAll", District.class);
             districts = findDistricts.getResultList();
+            transaction.commit();
         }catch(Exception ex){
-            districts = null;
+            if (transaction != null) {
+                transaction.rollback();
+            }
             ex.printStackTrace();
+            return null;
         }
-        entityManager.close();
         return districts;
     }
 
     @Override
     public District getSingleObject(Integer key) {
         District district;
-        entityManager = jpaUtil.getEntityManager();
-        try{
-            TypedQuery<District> findDistrict = entityManager.createNamedQuery("District.findById", District.class);
-            findDistrict.setParameter("idDistrict", District.class);
+        Transaction transaction = null;
+        try(Session session = sessionFactory.openSession()){
+            transaction = session.beginTransaction();
+            TypedQuery<District> findDistrict = session.createNamedQuery("District.findById", District.class);
+            findDistrict.setParameter("idDistrict", key);
             district = findDistrict.getSingleResult();
+            transaction.commit();
         }catch(Exception ex){
-            district = null;
+            if (transaction != null) {
+                transaction.rollback();
+            }
             ex.printStackTrace();
+            return null;
         }
-        entityManager.close();
         return district;
     }
     public static List<Branch> getBranches(District district){
         List<Branch> branches;
-        EntityManager entityManager = jpaUtil.getEntityManager();
-        try{
-            TypedQuery<Branch> findBranches = entityManager.createNamedQuery("Branch.findByDistrict", Branch.class);
+        Transaction transaction = null;
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        try(Session session = sessionFactory.openSession()){
+            transaction = session.beginTransaction();
+            TypedQuery<Branch> findBranches = session.createNamedQuery("Branch.findByDistrict", Branch.class);
             findBranches.setParameter("districtById", district);
             branches = findBranches.getResultList();
+            transaction.commit();
         }catch(Exception ex){
-            branches = new ArrayList<>();
+            if (transaction != null) {
+                transaction.rollback();
+            }
             ex.printStackTrace();
+            return null;
         }
-        entityManager.close();
-        jpaUtil.shutDown();
         return branches;
     }
     @Override
@@ -66,25 +76,22 @@ public class DistrictDAO extends DAO<District> {
         }
         return false;
     }
-    public List<DistrictDetails> getDistrictsByCantonName(String nameCanton) {
+    public List<District> getDistrictsByCantonName(String nameCanton) {
         List<District> persistedDistrict;
-        EntityManager entityManager = jpaUtil.getEntityManager();
-        try{
-            TypedQuery<District> findDistricts = entityManager.createNamedQuery("District.findByCantonByName", District.class);
+        Transaction transaction = null;
+        try(Session session = sessionFactory.openSession()){
+            transaction = session.beginTransaction();
+            TypedQuery<District> findDistricts = session.createNamedQuery("District.findByCantonByName", District.class);
             findDistricts.setParameter("nameCanton", nameCanton);
             persistedDistrict = findDistricts.getResultList();
+            transaction.commit();
         }catch(Exception ex){
-            persistedDistrict = new ArrayList<>();
+            if (transaction != null) {
+                transaction.rollback();
+            }
             ex.printStackTrace();
+            return null;
         }
-        entityManager.close();
-        if(persistedDistrict.isEmpty()){
-            return new ArrayList<>();
-        }
-        List<DistrictDetails> districts = new ArrayList<>();
-        for(District c : persistedDistrict){
-            districts.add(new DistrictDetails(c));
-        }
-        return districts;
+        return persistedDistrict;
     }
 }

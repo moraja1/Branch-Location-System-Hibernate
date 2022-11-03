@@ -11,7 +11,6 @@ import jakarta.persistence.*;
 })
 
 public class Employee extends EntityParent {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id_employee")
     private Integer idEmployee;

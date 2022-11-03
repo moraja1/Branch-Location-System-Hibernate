@@ -11,7 +11,8 @@ import java.util.Collection;
         @NamedQuery(name = "Canton.findById", query = "select c from Canton c where c.idCanton = :idCanton"),
         @NamedQuery(name = "Canton.findAll", query = "select c from Canton c"),
         @NamedQuery(name = "Canton.findByProvince", query = "select c from Canton c where c.provinceById = :provinceById"),
-        @NamedQuery(name = "Canton.findByProvinceByName", query = "select c from Canton c where c.provinceById.nameProvince = :nameProvince")
+        @NamedQuery(name = "Canton.findByProvinceByName", query = "select c from Canton c where c.provinceById.nameProvince = :nameProvince"),
+        @NamedQuery(name = "Canton.findByNameCanton", query = "select c from Canton c where c.nameCanton = :nameCanton")
 })
 public class Canton extends EntityParent{
     @GeneratedValue(strategy = GenerationType.IDENTITY)

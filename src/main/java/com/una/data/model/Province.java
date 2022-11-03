@@ -9,7 +9,8 @@ import java.util.Collection;
 @Table(name = "province")
 @NamedQueries({
         @NamedQuery(name = "Province.findById", query = "select p from Province p where p.idProvince = :idProvince"),
-        @NamedQuery(name = "Province.findAll", query = "select p from Province p")
+        @NamedQuery(name = "Province.findAll", query = "select p from Province p"),
+        @NamedQuery(name = "Province.findByNameProvince", query = "select p from Province p where p.nameProvince = :nameProvince")
 })
 public class Province extends EntityParent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)

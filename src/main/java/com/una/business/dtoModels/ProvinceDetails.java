@@ -9,14 +9,26 @@ import java.util.Objects;
  * A DTO for the {@link com.una.data.model.Province} entity
  */
 public class ProvinceDetails implements Serializable {
-    private String nameProvince;
+    private final Byte idProvince;
+    private final String nameProvince;
+    private final Byte zonePercentage;
 
     public ProvinceDetails(Province province){
+        this.idProvince = province.getId().byteValue();
         this.nameProvince = province.getNameProvince();
+        this.zonePercentage = province.getZonePercentage();
+    }
+
+    public Byte getIdProvince() {
+        return idProvince;
     }
 
     public String getNameProvince() {
         return nameProvince;
+    }
+
+    public Byte getZonePercentage() {
+        return zonePercentage;
     }
 
     @Override

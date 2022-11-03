@@ -1,12 +1,15 @@
 package com.una.data.dao;
 
 import com.una.business.dtoModels.CantonDetails;
-import com.una.data.jpa.jpaUtil;
 import com.una.data.model.Branch;
 import com.una.data.model.Canton;
 import com.una.data.model.District;
+import com.una.data.util.HibernateUtil;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,84 +18,96 @@ public class CantonDAO extends DAO<Canton> {
     @Override
     public List<Canton> getAllObjects() {
         List<Canton> cantons;
-        entityManager = jpaUtil.getEntityManager();
-        try{
-            TypedQuery<Canton> query = entityManager.createNamedQuery("Canton.findAll", Canton.class);
+        Transaction transaction = null;
+        try(Session session = sessionFactory.openSession()){
+            transaction = session.beginTransaction();
+            TypedQuery<Canton> query = session.createNamedQuery("Canton.findAll", Canton.class);
             cantons = query.getResultList();
-            for(Canton c : cantons){
-                c.setDistricts(getDistritcts(c));
-            }
+            transaction.commit();
         }catch(Exception ex){
-            cantons = new ArrayList<>();
+            if (transaction != null) {
+                transaction.rollback();
+            }
             ex.printStackTrace();
+            return null;
         }
-        entityManager.close();
         return cantons;
     }
 
     @Override
     public Canton getSingleObject(Integer key) {
         Canton canton;
-        entityManager = jpaUtil.getEntityManager();
-        try{
-            TypedQuery<Canton> findCanton = entityManager.createNamedQuery("Canton.findById", Canton.class);
+        Transaction transaction = null;
+        try(Session session = sessionFactory.openSession()){
+            transaction = session.beginTransaction();
+            TypedQuery<Canton> findCanton = session.createNamedQuery("Canton.findById", Canton.class);
             findCanton.setParameter("idCanton", key);
             canton = findCanton.getSingleResult();
             canton.setDistricts(getDistritcts(canton));
+            transaction.commit();
         }catch(Exception ex){
-            canton = null;
+            if (transaction != null) {
+                transaction.rollback();
+            }
             ex.printStackTrace();
+            return null;
         }
-        entityManager.close();
         return canton;
     }
-    public List<CantonDetails> getCantonsByNameProvince(String nameProvince){
+    public List<Canton> getCantonsByNameProvince(String nameProvince){
         List<Canton> persistedCantons;
-        EntityManager entityManager = jpaUtil.getEntityManager();
-        try{
-            TypedQuery<Canton> findCantons = entityManager.createNamedQuery("Canton.findByProvinceByName", Canton.class);
+        Transaction transaction = null;
+        try(Session session = sessionFactory.openSession()){
+            transaction = session.beginTransaction();
+            TypedQuery<Canton> findCantons = session.createNamedQuery("Canton.findByProvinceByName", Canton.class);
             findCantons.setParameter("nameProvince", nameProvince);
             persistedCantons = findCantons.getResultList();
+            transaction.commit();
         }catch(Exception ex){
-            persistedCantons = new ArrayList<>();
+            if (transaction != null) {
+                transaction.rollback();
+            }
             ex.printStackTrace();
+            return null;
         }
-        entityManager.close();
-        if(persistedCantons.isEmpty()){
-            return new ArrayList<>();
-        }
-        List<CantonDetails> cantons = new ArrayList<>();
-        for(Canton c : persistedCantons){
-            cantons.add(new CantonDetails(c));
-        }
-        return cantons;
+        return persistedCantons;
     }
     public static List<District> getDistritcts(Canton canton){
         List<District> districts;
-        EntityManager entityManager = jpaUtil.getEntityManager();
-        try{
-            TypedQuery<District> findDistricts = entityManager.createNamedQuery("District.findByCanton", District.class);
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Transaction transaction = null;
+        try(Session session = sessionFactory.openSession()){
+            transaction = session.beginTransaction();
+            TypedQuery<District> findDistricts = session.createNamedQuery("District.findByCanton", District.class);
             findDistricts.setParameter("cantonById", canton);
             districts = findDistricts.getResultList();
+            transaction.commit();
         }catch(Exception ex){
-            districts = new ArrayList<>();
+            if (transaction != null) {
+                transaction.rollback();
+            }
             ex.printStackTrace();
+            return null;
         }
-        entityManager.close();
         return districts;
     }
     public static List<Branch> getBranches(Canton canton) {
         List<Branch> branches;
-        EntityManager entityManager = jpaUtil.getEntityManager();
-        try{
-            TypedQuery<Branch> findBranches = entityManager.createNamedQuery("Branch.findByCanton", Branch.class);
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Transaction transaction = null;
+        try(Session session = sessionFactory.openSession()){
+            transaction = session.beginTransaction();
+            TypedQuery<Branch> findBranches = session.createNamedQuery("Branch.findByCanton", Branch.class);
             findBranches.setParameter("cantonById", canton);
             branches = findBranches.getResultList();
+            transaction.commit();
         }catch(Exception ex){
-            branches = new ArrayList<>();
+            if (transaction != null) {
+                transaction.rollback();
+            }
             ex.printStackTrace();
+            return null;
         }
-        entityManager.close();
         return branches;
     }
     @Override
