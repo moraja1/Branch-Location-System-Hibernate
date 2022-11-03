@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Presentation adapted">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/ReferenceDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/850cf992-3368-4775-9b9d-c0730fc7fe5c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/850cf992-3368-4775-9b9d-c0730fc7fe5c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2022_15_20__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2022_15_20__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/BranchAddViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/BranchAddViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/MainWindowViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/MainWindowViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/flowController/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/flowController/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/model/viewModels/componentModels/BranchPointer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/model/viewModels/componentModels/BranchPointer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/BranchAddView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/BranchAddView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/EmployeeAddView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/EmployeeAddView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewClasses/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewParent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/view/ViewParent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/Hibernate/hibernate-cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/Hibernate/hibernate-cfg.xml" afterDir="false" />
-    </list>
+    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Add, Edit and Erase Branch implemented" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +114,7 @@
       <workItem from="1667231614260" duration="16588000" />
       <workItem from="1667489351905" duration="246000" />
       <workItem from="1667489622686" duration="6325000" />
-      <workItem from="1667501340306" duration="1982000" />
+      <workItem from="1667501340306" duration="3329000" />
     </task>
     <task id="LOCAL-00001" summary="Intento 3541685486498 de que se conecte">
       <created>1667101136876</created>
@@ -178,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667255927370</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add, Edit and Erase Branch implemented">
+      <created>1667503726189</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1667503726189</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +188,8 @@
     <MESSAGE value="Base DAO implemented" />
     <MESSAGE value="DAO finished and Presentation in develop" />
     <MESSAGE value="Presentation adapted" />
-    <option name="LAST_COMMIT_MESSAGE" value="Presentation adapted" />
+    <MESSAGE value="Add, Edit and Erase Branch implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add, Edit and Erase Branch implemented" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
