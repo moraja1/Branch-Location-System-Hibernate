@@ -35,12 +35,20 @@ public class DataServices {
         return branchesForTable;
     }
     public static boolean addEmployeeExecution(EmployeeDetails e, BranchDetails b) {
-        return false;
+        Employee employee = InputParser.toEmployee(e);
+
+        dataDAO = new BranchDAO();
+        Branch branch = (Branch) dataDAO.getSingleObject(b.getIdBranch());
+        employee.setBranch(branch);
+        branch.addEmployee(employee);
+
+        dataDAO = new EmployeeDAO();
+        return dataDAO.add(employee);
     }
     public static boolean removeEmployeeExecution(EmployeeDetails e) {
         return false;
     }
-    public static BranchDetails getBranchInfo(Integer key) {
+    public static BranchDetails getBranchDetails(Integer key) {
         dataDAO = new BranchDAO();
         Branch branch = (Branch) dataDAO.getSingleObject(key);
         if(branch == null){
@@ -53,7 +61,7 @@ public class DataServices {
     }
 
     public static boolean addBranchExecution(BranchDetailsInput b) {
-        Branch newBranch = BranchInputParser.toBranch(b);
+        Branch newBranch = InputParser.toBranch(b);
         return dataDAO.add(newBranch);
     }
 
@@ -64,7 +72,7 @@ public class DataServices {
     }
 
     public static boolean editBranchExecution(BranchDetailsInput b) {
-        Branch newBranch = BranchInputParser.toBranch(b);
+        Branch newBranch = InputParser.toBranch(b);
         return dataDAO.edit(newBranch);
     }
 

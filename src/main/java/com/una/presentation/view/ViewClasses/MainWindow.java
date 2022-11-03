@@ -13,13 +13,10 @@ import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-import javax.swing.plaf.FontUIResource;
 import javax.swing.table.TableModel;
-import javax.swing.text.StyleContext;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.List;
-import java.util.Locale;
 
 public class MainWindow extends ViewParent {
     private JPanel main_window_panel;

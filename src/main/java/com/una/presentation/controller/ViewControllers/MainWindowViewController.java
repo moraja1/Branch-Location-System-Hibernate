@@ -105,7 +105,8 @@ public class MainWindowViewController {
                 main_window.setTableModel(empTableModel);
             }
         }
-    }public static void reportEmployee() {
+    }
+    public static void reportEmployee() {
         String path = "";
         JFileChooser j = new JFileChooser();
         java.util.Date fecha = new Date();

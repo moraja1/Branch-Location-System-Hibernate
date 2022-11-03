@@ -13,7 +13,6 @@ import java.awt.event.*;
 import java.util.List;
 
 public class EmployeeAddView extends ViewParent {
-    private JDialog dialog;
     private JTextField add_emp_ced_text;
     private JTextField add_emp_nombre_text;
     private JTextField add_emp_tel_text;
@@ -70,6 +69,7 @@ public class EmployeeAddView extends ViewParent {
         add_emp_nombre_text.setText(String.valueOf(model[1]));
         add_emp_tel_text.setText(String.valueOf(model[2]));
         add_emp_salario_text.setText(String.valueOf(model[3]));
+        EmployeeAddViewController.initPointer(model);
     }
 
     @Override
@@ -92,42 +92,12 @@ public class EmployeeAddView extends ViewParent {
                 dialog.dispose();
             }
         });
-        dialog.addWindowListener(new WindowListener() {
-            @Override
-            public void windowOpened(WindowEvent e) {
-
-            }
-
-            @Override
-            public void windowClosing(WindowEvent e) {
-
-            }
-
-            @Override
-            public void windowClosed(WindowEvent e) {
-                MainWindowViewController.windowInitialized();
-            }
-
-            @Override
-            public void windowIconified(WindowEvent e) {
-
-            }
-
-            @Override
-            public void windowDeiconified(WindowEvent e) {
-
-            }
-
-            @Override
-            public void windowActivated(WindowEvent e) {
-
-            }
-
-            @Override
-            public void windowDeactivated(WindowEvent e) {
-
-            }
-        });
+        dialog.addWindowListener(new WindowAdapter() {
+             @Override
+             public void windowClosing(WindowEvent e) {
+                 MainWindowViewController.windowInitialized();
+             }
+         });
         add_emp_tel_text.addKeyListener(new KeyAdapter() {
             public void keyTyped(KeyEvent e) {
                 char caracter = e.getKeyChar();

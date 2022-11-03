@@ -5,10 +5,8 @@ import com.una.business.dtoModels.*;
 import com.una.presentation.controller.dto.BranchDetailsInput;
 import com.una.presentation.model.viewModels.componentModels.BranchPointer;
 import com.una.presentation.view.ViewClasses.BranchAddView;
-import com.una.presentation.view.ViewParent;
 
 import javax.swing.*;
-import javax.xml.crypto.Data;
 import java.awt.*;
 import java.util.List;
 import java.util.Vector;
@@ -108,7 +106,7 @@ public class BranchAddViewController {
     }
 
     public static void initPointer() {
-        BranchDetails branchDetails = DataServices.getBranchInfo((Integer) model[0]);
+        BranchDetails branchDetails = DataServices.getBranchDetails((Integer) model[0]);
         if(branchDetails != null){
             branch_add_view.setNewBranch(new BranchPointer(branchDetails));
         }

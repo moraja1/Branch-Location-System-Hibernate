@@ -239,7 +239,7 @@
                 <constraints border-constraint="South"/>
                 <properties>
                   <horizontalAlignment value="0"/>
-                  <text value="Jason Mora Viquez - Carlos Daniel Sibaja Vindas - Brandon Alfaro Espinoza"/>
+                  <text value="Jason Mora Viquez"/>
                 </properties>
               </component>
             </children>

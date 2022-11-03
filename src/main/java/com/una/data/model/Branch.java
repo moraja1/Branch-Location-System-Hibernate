@@ -101,4 +101,8 @@ public class Branch extends EntityParent{
     public void setEmployees(Collection<Employee> employees) {
         this.employeesById = employees;
     }
+
+    public void addEmployee(Employee e){
+        employeesById.add(e);
+    }
 }

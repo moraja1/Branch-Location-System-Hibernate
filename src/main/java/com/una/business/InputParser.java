@@ -1,12 +1,15 @@
 package com.una.business;
 
+import com.una.business.dtoModels.BranchDetails;
+import com.una.business.dtoModels.EmployeeDetails;
 import com.una.data.dao.DAO;
 import com.una.data.dao.DistrictDAO;
 import com.una.data.model.Branch;
 import com.una.data.model.District;
+import com.una.data.model.Employee;
 import com.una.presentation.controller.dto.BranchDetailsInput;
 
-public class BranchInputParser {
+public class InputParser {
     private static DAO dataDAO;
     public static Branch toBranch(BranchDetailsInput b) {
         Branch branch = new Branch();
@@ -25,4 +28,14 @@ public class BranchInputParser {
         }
         return null;
     }
+
+    public static Employee toEmployee(EmployeeDetails e){
+        Employee employee = new Employee();
+        employee.setIdEmployee(e.getIdEmployee());
+        employee.setNameEmployee(e.getNameEmployee());
+        employee.setBaseSalary(e.getBaseSalary());
+        employee.setPhoneNumber(e.getPhoneNumber());
+        return employee;
+    }
+
 }
