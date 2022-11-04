@@ -89,6 +89,7 @@ public class EmployeeAddView extends ViewParent {
         add_emp_cancel_btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                MainWindowViewController.windowInitialized();
                 dialog.dispose();
             }
         });

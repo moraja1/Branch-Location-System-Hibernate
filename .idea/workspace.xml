@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="ADD Employee implemented">
+    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Presentation adapted">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/EmployeeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/EmployeeDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/Hibernate/hibernate-cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/Hibernate/hibernate-cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +65,11 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/N00147948/Desktop/Git/ProyectProg3Hibernate&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/git/ProyectProg3Hibernate/src/main/java/com/una/data/jpa&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propGUI&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -118,9 +117,6 @@
       <workItem from="1667097251038" duration="5266000" />
       <workItem from="1667178064792" duration="6043000" />
       <workItem from="1667231614260" duration="16588000" />
-      <workItem from="1667489351905" duration="246000" />
-      <workItem from="1667489622686" duration="6325000" />
-      <workItem from="1667501340306" duration="9763000" />
     </task>
     <task id="LOCAL-00001" summary="Intento 3541685486498 de que se conecte">
       <created>1667101136876</created>
@@ -164,28 +160,7 @@
       <option name="project" value="LOCAL" />
       <updated>1667255927370</updated>
     </task>
-    <task id="LOCAL-00007" summary="Add, Edit and Erase Branch implemented">
-      <created>1667503726189</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1667503726189</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Add, Edit and Erase Branch implemented">
-      <created>1667506008774</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1667506008774</updated>
-    </task>
-    <task id="LOCAL-00009" summary="ADD Employee implemented">
-      <created>1667511597792</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1667511597792</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,22 +183,30 @@
     <MESSAGE value="Base DAO implemented" />
     <MESSAGE value="DAO finished and Presentation in develop" />
     <MESSAGE value="Presentation adapted" />
-    <MESSAGE value="Add, Edit and Erase Branch implemented" />
-    <MESSAGE value="ADD Employee implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD Employee implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Presentation adapted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/una/presentation/model/viewModels/componentModels/BranchPointer.java</url>
-          <line>127</line>
-          <option name="timeStamp" value="48" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/una/presentation/model/viewModels/componentModels/BranchPointer.java</url>
-          <line>128</line>
-          <option name="timeStamp" value="49" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

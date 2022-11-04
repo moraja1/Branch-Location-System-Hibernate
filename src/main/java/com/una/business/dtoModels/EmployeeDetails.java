@@ -49,6 +49,17 @@ public class EmployeeDetails implements Serializable {
         this.totalSalary = totalSalary;
     }
 
+    public EmployeeDetails(Integer idEmployee, String nameEmployee, String phoneNumber, Double baseSalary, Integer branchId) {
+        this.idEmployee = idEmployee;
+        this.nameEmployee = nameEmployee;
+        this.phoneNumber = phoneNumber;
+        this.baseSalary = baseSalary;
+        this.branchId = branchId;
+        this.branchReference = "";
+        this.zonePercentage = 0;
+        this.totalSalary = 0.0;
+    }
+
     public Integer getIdEmployee() {
         return idEmployee;
     }

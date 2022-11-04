@@ -32,11 +32,7 @@ public class EmployeeAddViewController {
         Double salary = Double.parseDouble(employee_add_view.getEmployeeSalary());
         BranchPointer branch = employee_add_view.getSelectedBranch();
 
-        BranchDetails branchDetails = DataServices.getBranchDetails(branch.getBranchID());
-
-        String reference = branchDetails.getReference();
-
-        EmployeeDetails employee = new EmployeeDetails(id, name, phone_number, salary, reference, branch.getBranchID());
+        EmployeeDetails employee = new EmployeeDetails(id, name, phone_number, salary, branch.getBranchID());
 
         if(DataServices.addEmployeeExecution(employee)){
             JOptionPane.showMessageDialog(new JFrame(), "Empleado agregado correctamente", "Confirmación",
@@ -51,6 +47,7 @@ public class EmployeeAddViewController {
     }
 
     public static void initPointer(Object[] model) {
+        EmployeeAddViewController.model = model;
 
     }
 }
