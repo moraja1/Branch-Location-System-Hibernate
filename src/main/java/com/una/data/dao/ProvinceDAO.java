@@ -91,13 +91,4 @@ public class ProvinceDAO extends DAO<Province>{
         }
         return branches;
     }
-
-    @Override
-    protected boolean hasDependencies(Province obj) {
-        if(!obj.getCantons().isEmpty() &&
-                !obj.getBranches().isEmpty()){
-            return true;
-        }
-        return false;
-    }
 }

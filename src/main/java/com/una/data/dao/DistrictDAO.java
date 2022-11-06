@@ -69,13 +69,6 @@ public class DistrictDAO extends DAO<District> {
         }
         return branches;
     }
-    @Override
-    protected boolean hasDependencies(District obj) {
-        if(!obj.getBranches().isEmpty()){
-            return true;
-        }
-        return false;
-    }
     public List<District> getDistrictsByCantonName(String nameCanton) {
         List<District> persistedDistrict;
         Transaction transaction = null;

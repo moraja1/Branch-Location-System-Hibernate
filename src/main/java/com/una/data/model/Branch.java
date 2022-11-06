@@ -36,7 +36,7 @@ public class Branch extends EntityParent{
     @ManyToOne
     @JoinColumn(name = "id_province", referencedColumnName = "id_province", nullable = false)
     private Province provinceById;
-    @OneToMany(mappedBy = "branchById")
+    @OneToMany(mappedBy = "branchById", cascade = CascadeType.REFRESH)
     private Collection<Employee> employeesById;
 
     public Integer getId() {

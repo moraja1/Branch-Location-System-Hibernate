@@ -52,7 +52,9 @@ public abstract class DAO<T extends EntityParent>{
     }
     public boolean erase(T obj){
         Transaction transaction = null;
-        try(Session session = sessionFactory.openSession()){
+        Session session;
+        try {
+            session = sessionFactory.openSession();
             transaction = session.beginTransaction();
             session.remove(obj);
             transaction.commit();
@@ -82,5 +84,4 @@ public abstract class DAO<T extends EntityParent>{
     }
     public abstract List<T> getAllObjects();
     public abstract T getSingleObject(Integer key);
-    protected abstract boolean hasDependencies(T obj);
 }

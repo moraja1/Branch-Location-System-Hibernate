@@ -1,7 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="SISE/Hibernate">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.43">
-    <root id="1"/>
+    <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <Grants>|root||jaison|localhost|ALTER|G
+|root||root|localhost|ALTER|G
+|root||jaison|localhost|ALTER ROUTINE|G
+|root||root|localhost|ALTER ROUTINE|G
+|root||jaison|localhost|APPLICATION_PASSWORD_ADMIN|G
+|root||root|localhost|APPLICATION_PASSWORD_ADMIN|G
+|root||jaison|localhost|AUDIT_ABORT_EXEMPT|G
+|root||mysql.infoschema|localhost|AUDIT_ABORT_EXEMPT|G
+|root||mysql.session|localhost|AUDIT_ABORT_EXEMPT|G
+|root||mysql.sys|localhost|AUDIT_ABORT_EXEMPT|G
+|root||root|localhost|AUDIT_ABORT_EXEMPT|G
+|root||jaison|localhost|AUDIT_ADMIN|G
+|root||root|localhost|AUDIT_ADMIN|G
+|root||jaison|localhost|AUTHENTICATION_POLICY_ADMIN|G
+|root||root|localhost|AUTHENTICATION_POLICY_ADMIN|G
+|root||jaison|localhost|BACKUP_ADMIN|G
+|root||mysql.session|localhost|BACKUP_ADMIN|G
+|root||root|localhost|BACKUP_ADMIN|G
+|root||jaison|localhost|BINLOG_ADMIN|G
+|root||root|localhost|BINLOG_ADMIN|G
+|root||jaison|localhost|BINLOG_ENCRYPTION_ADMIN|G
+|root||root|localhost|BINLOG_ENCRYPTION_ADMIN|G
+|root||jaison|localhost|CLONE_ADMIN|G
+|root||mysql.session|localhost|CLONE_ADMIN|G
+|root||root|localhost|CLONE_ADMIN|G
+|root||jaison|localhost|CONNECTION_ADMIN|G
+|root||mysql.session|localhost|CONNECTION_ADMIN|G
+|root||root|localhost|CONNECTION_ADMIN|G
+|root||jaison|localhost|CREATE|G
+|root||root|localhost|CREATE|G
+|root||jaison|localhost|CREATE ROLE|G
+|root||root|localhost|CREATE ROLE|G
+|root||jaison|localhost|CREATE ROUTINE|G
+|root||root|localhost|CREATE ROUTINE|G
+|root||jaison|localhost|CREATE TABLESPACE|G
+|root||root|localhost|CREATE TABLESPACE|G
+|root||jaison|localhost|CREATE TEMPORARY TABLES|G
+|root||root|localhost|CREATE TEMPORARY TABLES|G
+|root||jaison|localhost|CREATE USER|G
+|root||root|localhost|CREATE USER|G
+|root||jaison|localhost|CREATE VIEW|G
+|root||root|localhost|CREATE VIEW|G
+|root||jaison|localhost|DELETE|G
+|root||root|localhost|DELETE|G
+|root||jaison|localhost|DROP|G
+|root||root|localhost|DROP|G
+|root||jaison|localhost|DROP ROLE|G
+|root||root|localhost|DROP ROLE|G
+|root||jaison|localhost|ENCRYPTION_KEY_ADMIN|G
+|root||root|localhost|ENCRYPTION_KEY_ADMIN|G
+|root||jaison|localhost|EVENT|G
+|root||root|localhost|EVENT|G
+|root||jaison|localhost|EXECUTE|G
+|root||root|localhost|EXECUTE|G
+|root||jaison|localhost|FILE|G
+|root||root|localhost|FILE|G
+|root||jaison|localhost|FIREWALL_EXEMPT|G
+|root||mysql.infoschema|localhost|FIREWALL_EXEMPT|G
+|root||mysql.session|localhost|FIREWALL_EXEMPT|G
+|root||mysql.sys|localhost|FIREWALL_EXEMPT|G
+|root||root|localhost|FIREWALL_EXEMPT|G
+|root||jaison|localhost|FLUSH_OPTIMIZER_COSTS|G
+|root||root|localhost|FLUSH_OPTIMIZER_COSTS|G
+|root||jaison|localhost|FLUSH_STATUS|G
+|root||root|localhost|FLUSH_STATUS|G
+|root||jaison|localhost|FLUSH_TABLES|G
+|root||root|localhost|FLUSH_TABLES|G
+|root||jaison|localhost|FLUSH_USER_RESOURCES|G
+|root||root|localhost|FLUSH_USER_RESOURCES|G
+|root||jaison|localhost|GROUP_REPLICATION_ADMIN|G
+|root||root|localhost|GROUP_REPLICATION_ADMIN|G
+|root||jaison|localhost|GROUP_REPLICATION_STREAM|G
+|root||root|localhost|GROUP_REPLICATION_STREAM|G
+|root||jaison|localhost|INDEX|G
+|root||root|localhost|INDEX|G
+|root||jaison|localhost|INNODB_REDO_LOG_ARCHIVE|G
+|root||root|localhost|INNODB_REDO_LOG_ARCHIVE|G
+|root||jaison|localhost|INNODB_REDO_LOG_ENABLE|G
+|root||root|localhost|INNODB_REDO_LOG_ENABLE|G
+|root||jaison|localhost|INSERT|G
+|root||root|localhost|INSERT|G
+|root||jaison|localhost|LOCK TABLES|G
+|root||root|localhost|LOCK TABLES|G
+|root||jaison|localhost|PASSWORDLESS_USER_ADMIN|G
+|root||root|localhost|PASSWORDLESS_USER_ADMIN|G
+|root||jaison|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||mysql.session|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||root|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||jaison|localhost|PROCESS|G
+|root||root|localhost|PROCESS|G
+|root||jaison|localhost|REFERENCES|G
+|root||root|localhost|REFERENCES|G
+|root||jaison|localhost|RELOAD|G
+|root||root|localhost|RELOAD|G
+|root||jaison|localhost|REPLICATION CLIENT|G
+|root||root|localhost|REPLICATION CLIENT|G
+|root||jaison|localhost|REPLICATION SLAVE|G
+|root||root|localhost|REPLICATION SLAVE|G
+|root||jaison|localhost|REPLICATION_APPLIER|G
+|root||root|localhost|REPLICATION_APPLIER|G
+|root||jaison|localhost|REPLICATION_SLAVE_ADMIN|G
+|root||root|localhost|REPLICATION_SLAVE_ADMIN|G
+|root||jaison|localhost|RESOURCE_GROUP_ADMIN|G
+|root||root|localhost|RESOURCE_GROUP_ADMIN|G
+|root||jaison|localhost|RESOURCE_GROUP_USER|G
+|root||root|localhost|RESOURCE_GROUP_USER|G
+|root||jaison|localhost|ROLE_ADMIN|G
+|root||root|localhost|ROLE_ADMIN|G
+|root||jaison|localhost|SELECT|G
+|root||mysql.infoschema|localhost|SELECT|G
+|root||root|localhost|SELECT|G
+|root||jaison|localhost|SENSITIVE_VARIABLES_OBSERVER|G
+|root||root|localhost|SENSITIVE_VARIABLES_OBSERVER|G
+|root||jaison|localhost|SERVICE_CONNECTION_ADMIN|G
+|root||root|localhost|SERVICE_CONNECTION_ADMIN|G
+|root||jaison|localhost|SESSION_VARIABLES_ADMIN|G
+|root||mysql.session|localhost|SESSION_VARIABLES_ADMIN|G
+|root||root|localhost|SESSION_VARIABLES_ADMIN|G
+|root||jaison|localhost|SET_USER_ID|G
+|root||root|localhost|SET_USER_ID|G
+|root||jaison|localhost|SHOW DATABASES|G
+|root||root|localhost|SHOW DATABASES|G
+|root||jaison|localhost|SHOW VIEW|G
+|root||root|localhost|SHOW VIEW|G
+|root||jaison|localhost|SHOW_ROUTINE|G
+|root||root|localhost|SHOW_ROUTINE|G
+|root||jaison|localhost|SHUTDOWN|G
+|root||mysql.session|localhost|SHUTDOWN|G
+|root||root|localhost|SHUTDOWN|G
+|root||jaison|localhost|SUPER|G
+|root||mysql.session|localhost|SUPER|G
+|root||root|localhost|SUPER|G
+|root||jaison|localhost|SYSTEM_USER|G
+|root||mysql.infoschema|localhost|SYSTEM_USER|G
+|root||mysql.session|localhost|SYSTEM_USER|G
+|root||mysql.sys|localhost|SYSTEM_USER|G
+|root||root|localhost|SYSTEM_USER|G
+|root||jaison|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||mysql.session|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||root|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||jaison|localhost|TABLE_ENCRYPTION_ADMIN|G
+|root||root|localhost|TABLE_ENCRYPTION_ADMIN|G
+|root||jaison|localhost|TRIGGER|G
+|root||root|localhost|TRIGGER|G
+|root||jaison|localhost|UPDATE|G
+|root||root|localhost|UPDATE|G
+|root||jaison|localhost|XA_RECOVER_ADMIN|G
+|root||root|localhost|XA_RECOVER_ADMIN|G
+|root||jaison|localhost|grant option|G
+|root||root|localhost|grant option|G
+performance_schema|schema||mysql.session|localhost|SELECT|G
+sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
+      <ServerVersion>8.0.31</ServerVersion>
+    </root>
     <collation id="2" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
     </collation>
@@ -901,27 +1058,29 @@
     <collation id="287" parent="1" name="utf8mb4_zh_0900_as_cs">
       <Charset>utf8mb4</Charset>
     </collation>
-    <schema id="288" parent="1" name="_sise"/>
-    <schema id="289" parent="1" name="information_schema">
+    <schema id="288" parent="1" name="information_schema">
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
-    <schema id="290" parent="1" name="mysql">
+    <schema id="289" parent="1" name="mysql">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="291" parent="1" name="performance_schema">
+    <schema id="290" parent="1" name="performance_schema">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="292" parent="1" name="sakila">
+    <schema id="291" parent="1" name="sakila">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="293" parent="1" name="sise">
+    <schema id="292" parent="1" name="sise">
       <Current>1</Current>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="294" parent="1" name="sys">
+    <schema id="293" parent="1" name="sys">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="295" parent="1" name="world">
+    <schema id="294" parent="1" name="world">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="295" parent="1" name="proyecto2_chat">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="296" parent="1" name="mysql.infoschema">
@@ -943,237 +1102,240 @@
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="300" parent="293" name="branch">
+    <user id="300" parent="1" name="jaison">
+      <Host>localhost</Host>
+    </user>
+    <table id="301" parent="292" name="branch">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="301" parent="293" name="canton">
+    <table id="302" parent="292" name="canton">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="302" parent="293" name="district">
+    <table id="303" parent="292" name="district">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="303" parent="293" name="employee">
+    <table id="304" parent="292" name="employee">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="304" parent="293" name="province">
+    <table id="305" parent="292" name="province">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="305" parent="300" name="id_branch">
-      <DataType>INT(10)|4s</DataType>
+    <column id="306" parent="301" name="id_branch">
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="306" parent="300" name="address">
-      <DataType>VARCHAR(32)|12s</DataType>
+    <column id="307" parent="301" name="address">
+      <DataType>varchar(32)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="307" parent="300" name="coord_x">
-      <DataType>INT(10)|4s</DataType>
+    <column id="308" parent="301" name="coord_x">
+      <DataType>int|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="308" parent="300" name="coord_y">
-      <DataType>INT(10)|4s</DataType>
+    <column id="309" parent="301" name="coord_y">
+      <DataType>int|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="309" parent="300" name="id_district">
-      <DataType>INT(10)|4s</DataType>
+    <column id="310" parent="301" name="id_district">
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="310" parent="300" name="id_canton">
-      <DataType>INT(10)|4s</DataType>
+    <column id="311" parent="301" name="id_canton">
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="311" parent="300" name="id_province">
-      <DataType>TINYINT(3)|-6s</DataType>
+    <column id="312" parent="301" name="id_province">
+      <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <foreign-key id="312" parent="300" name="branch_ibfk_1">
+    <foreign-key id="313" parent="301" name="branch_ibfk_1">
       <ColNames>id_district</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_district</RefColNames>
       <RefTableName>district</RefTableName>
     </foreign-key>
-    <foreign-key id="313" parent="300" name="branch_ibfk_2">
+    <foreign-key id="314" parent="301" name="branch_ibfk_2">
       <ColNames>id_canton</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_canton</RefColNames>
       <RefTableName>canton</RefTableName>
     </foreign-key>
-    <foreign-key id="314" parent="300" name="branch_ibfk_3">
+    <foreign-key id="315" parent="301" name="branch_ibfk_3">
       <ColNames>id_province</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_province</RefColNames>
       <RefTableName>province</RefTableName>
     </foreign-key>
-    <index id="315" parent="300" name="PRIMARY">
+    <index id="316" parent="301" name="PRIMARY">
       <ColNames>id_branch</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="316" parent="300" name="id_district">
+    <index id="317" parent="301" name="id_district">
       <ColNames>id_district</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="317" parent="300" name="id_canton">
+    <index id="318" parent="301" name="id_canton">
       <ColNames>id_canton</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="318" parent="300" name="id_province">
+    <index id="319" parent="301" name="id_province">
       <ColNames>id_province</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="319" parent="300" name="PRIMARY">
+    <key id="320" parent="301" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>id_branch</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="320" parent="301" name="id_canton">
-      <AutoIncrement>1</AutoIncrement>
-      <DataType>INT(10)|4s</DataType>
+    <column id="321" parent="302" name="id_canton">
+      <AutoIncrement>87</AutoIncrement>
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="321" parent="301" name="id_province">
-      <DataType>TINYINT(3)|-6s</DataType>
+    <column id="322" parent="302" name="id_province">
+      <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="322" parent="301" name="name_canton">
-      <DataType>VARCHAR(45)|12s</DataType>
+    <column id="323" parent="302" name="name_canton">
+      <DataType>varchar(45)|0s</DataType>
       <Position>3</Position>
     </column>
-    <foreign-key id="323" parent="301" name="canton_ibfk_1">
+    <foreign-key id="324" parent="302" name="canton_ibfk_1">
       <ColNames>id_province</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_province</RefColNames>
       <RefTableName>province</RefTableName>
     </foreign-key>
-    <index id="324" parent="301" name="PRIMARY">
+    <index id="325" parent="302" name="PRIMARY">
       <ColNames>id_canton</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="325" parent="301" name="id_province">
+    <index id="326" parent="302" name="id_province">
       <ColNames>id_province</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="326" parent="301" name="PRIMARY">
+    <key id="327" parent="302" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>id_canton</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="327" parent="302" name="id_district">
-      <AutoIncrement>1</AutoIncrement>
-      <DataType>INT(10)|4s</DataType>
+    <column id="328" parent="303" name="id_district">
+      <AutoIncrement>491</AutoIncrement>
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="328" parent="302" name="id_canton">
-      <DataType>INT(10)|4s</DataType>
+    <column id="329" parent="303" name="id_canton">
+      <DataType>int|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="329" parent="302" name="name_district">
-      <DataType>VARCHAR(45)|12s</DataType>
+    <column id="330" parent="303" name="name_district">
+      <DataType>varchar(45)|0s</DataType>
       <Position>3</Position>
     </column>
-    <foreign-key id="330" parent="302" name="district_ibfk_1">
+    <foreign-key id="331" parent="303" name="district_ibfk_1">
       <ColNames>id_canton</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_canton</RefColNames>
       <RefTableName>canton</RefTableName>
     </foreign-key>
-    <index id="331" parent="302" name="PRIMARY">
+    <index id="332" parent="303" name="PRIMARY">
       <ColNames>id_district</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="332" parent="302" name="id_canton">
+    <index id="333" parent="303" name="id_canton">
       <ColNames>id_canton</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="333" parent="302" name="PRIMARY">
+    <key id="334" parent="303" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>id_district</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="334" parent="303" name="id_employee">
-      <DataType>INT(10)|4s</DataType>
+    <column id="335" parent="304" name="id_employee">
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="335" parent="303" name="name_employee">
-      <DataType>VARCHAR(32)|12s</DataType>
+    <column id="336" parent="304" name="name_employee">
+      <DataType>varchar(32)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="336" parent="303" name="phone_number">
-      <DataType>VARCHAR(32)|12s</DataType>
+    <column id="337" parent="304" name="phone_number">
+      <DataType>varchar(32)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="337" parent="303" name="base_salary">
-      <DataType>DOUBLE(22)|8s</DataType>
+    <column id="338" parent="304" name="base_salary">
+      <DataType>double|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="338" parent="303" name="id_branch">
-      <DataType>INT(10)|4s</DataType>
+    <column id="339" parent="304" name="id_branch">
+      <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <foreign-key id="339" parent="303" name="employee_ibfk_1">
+    <foreign-key id="340" parent="304" name="employee_ibfk_1">
       <ColNames>id_branch</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_branch</RefColNames>
       <RefTableName>branch</RefTableName>
     </foreign-key>
-    <index id="340" parent="303" name="PRIMARY">
+    <index id="341" parent="304" name="PRIMARY">
       <ColNames>id_employee</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="341" parent="303" name="id_branch">
+    <index id="342" parent="304" name="id_branch">
       <ColNames>id_branch</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="342" parent="303" name="PRIMARY">
+    <key id="343" parent="304" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>id_employee</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="343" parent="304" name="id_province">
-      <DataType>TINYINT(3)|-6s</DataType>
+    <column id="344" parent="305" name="id_province">
+      <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="344" parent="304" name="name_province">
-      <DataType>VARCHAR(10)|12s</DataType>
+    <column id="345" parent="305" name="name_province">
+      <DataType>varchar(10)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="345" parent="304" name="zone_percentage">
-      <DataType>TINYINT(3)|-6s</DataType>
+    <column id="346" parent="305" name="zone_percentage">
+      <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="346" parent="304" name="PRIMARY">
+    <index id="347" parent="305" name="PRIMARY">
       <ColNames>id_province</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="347" parent="304" name="PRIMARY">
+    <key id="348" parent="305" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
-      <UnderlyingIndexColNames>id_province</UnderlyingIndexColNames>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

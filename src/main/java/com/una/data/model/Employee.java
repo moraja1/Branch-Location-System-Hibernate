@@ -23,7 +23,7 @@ public class Employee extends EntityParent {
     @Basic
     @Column(name = "base_salary")
     private Double baseSalary;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.REFRESH)
     @JoinColumn(name = "id_branch", referencedColumnName = "id_branch", nullable = false)
     private Branch branchById;
 

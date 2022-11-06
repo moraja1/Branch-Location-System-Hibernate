@@ -110,12 +110,4 @@ public class CantonDAO extends DAO<Canton> {
         }
         return branches;
     }
-    @Override
-    protected boolean hasDependencies(Canton obj) {
-        if(!obj.getDistricts().isEmpty() &&
-                !obj.getBranches().isEmpty()){
-            return true;
-        }
-        return false;
-    }
 }

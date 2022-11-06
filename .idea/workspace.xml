@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="Presentation adapted">
+    <list default="true" id="02892c79-82c4-45ae-921f-9732ef331457" name="Changes" comment="add employee functionality developed">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/850cf992-3368-4775-9b9d-c0730fc7fe5c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/850cf992-3368-4775-9b9d-c0730fc7fe5c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2022_15_20__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2022_15_20__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_11_2022_13_04__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_11_2022_13_04__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/EmployeeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/business/dtoModels/EmployeeDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/presentation/controller/ViewControllers/EmployeeAddViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/Hibernate/hibernate-cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/Hibernate/hibernate-cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/BranchDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/BranchDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/CantonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/CantonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DistrictDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/DistrictDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/EmployeeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/dao/ProvinceDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/dao/ProvinceDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Branch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/una/data/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/una/data/model/Employee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +35,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -184,31 +194,5 @@
     <MESSAGE value="DAO finished and Presentation in develop" />
     <MESSAGE value="Presentation adapted" />
     <option name="LAST_COMMIT_MESSAGE" value="Presentation adapted" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/una/business/DataServices.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

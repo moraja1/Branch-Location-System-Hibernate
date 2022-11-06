@@ -46,8 +46,8 @@ public class BranchDAO extends DAO<Branch> {
             TypedQuery<Branch> findBranch = session.createNamedQuery("Branch.findById", Branch.class);
             findBranch.setParameter("idBranch", key);
             branch = findBranch.getSingleResult();
-            branch.setEmployees(getEmployees(branch));
             transaction.commit();
+            session.close();
         }catch(Exception ex){
             if (transaction != null) {
                 transaction.rollback();
@@ -75,12 +75,5 @@ public class BranchDAO extends DAO<Branch> {
             return null;
         }
         return employees;
-    }
-    @Override
-    protected boolean hasDependencies(Branch obj) {
-        if(!obj.getEmployees().isEmpty()){
-            return true;
-        }
-        return false;
     }
 }
